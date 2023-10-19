@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "congress": 118,
+  "chambers": [
+    "House",
+    "Senate"
+  ],
+  "keys": [
+    "7iL2D6tBo8UHHJ6lGIfDbm369EfMujb2wFYckhhh",
+    "dDgvN2pkaV1pMowAV3r10WHQiq9c3hCUJ8IysEdM",
+    "Vg0xOHZxsaDXs6bJN8gcuTVrr0i7BFVo2DpD88kA"
+  ],
+  "local": {
+    "url": "http://localhost",
+    "port": {
+      "bills": 3000,
+      "bill": 3001,
+      "legislators": 3010,
+      "legislator": 3011,
+      "votes": 3020,
+      "vote": 3021
+    }
+  },
+  "remote": {
+    "url": "https://api.propublica.org/congress"
+  }
+}

@@ -1,0 +1,671 @@
+{
+  "S000033": {
+    "status": "OK",
+    "copyright": "Copyright (c) 2022 Pro Publica Inc. All Rights Reserved.",
+    "results": [
+      {
+        "member_id": "S000033",
+        "num_results": "20",
+        "offset": "0",
+        "votes": [
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "275",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/275.json",
+            "bill": {
+              "bill_id": "pn2142-117",
+              "number": "PN2142",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN2142-117",
+              "number": "PN2142",
+              "name": "",
+              "agency": ""
+            },
+            "description": "Elizabeth Wilson Hanes, of Virginia, to be United States District Judge for the Eastern District of Virginia",
+            "question": "On the Cloture Motion",
+            "result": "Cloture Motion Agreed to",
+            "date": "2022-08-01",
+            "time": "17:35:00",
+            "total": {
+              "yes": 56,
+              "no": 33,
+              "present": 0,
+              "not_voting": 11
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "274",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/274.json",
+            "bill": {
+              "bill_id": "pn2133-117",
+              "number": "PN2133",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN2133-117",
+              "number": "PN2133",
+              "name": "",
+              "agency": ""
+            },
+            "description": "David Pressman, of New York, to be Ambassador to Hungary",
+            "question": "On the Nomination",
+            "result": "Nomination Confirmed",
+            "date": "2022-07-28",
+            "time": "13:50:00",
+            "total": {
+              "yes": 61,
+              "no": 30,
+              "present": 0,
+              "not_voting": 9
+            },
+            "position": "Not Voting"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "273",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/273.json",
+            "bill": {
+              "bill_id": "hr7776-117",
+              "number": "H.R.7776",
+              "sponsor_id": "D000191",
+              "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr7776.json",
+              "title": "To provide for improvements to the rivers and harbors of the United States, to provide for the conservation and development of water and related resources, and for other purposes.",
+              "latest_action": "Message on Senate action sent to the House."
+            },
+            "amendment": {},
+            "description": "A bill to provide for improvements to the rivers and harbors of the United States, to provide for the conservation and development of water and related resources, and for other ...",
+            "question": "On Passage of the Bill",
+            "result": "Bill Passed",
+            "date": "2022-07-28",
+            "time": "12:19:00",
+            "total": {
+              "yes": 93,
+              "no": 1,
+              "present": 0,
+              "not_voting": 6
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "272",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/272.json",
+            "bill": {
+              "bill_id": "s3373-117",
+              "number": "S.3373",
+              "sponsor_id": "K000384",
+              "bill_uri": "https://api.propublica.org/congress/v1/117/bills/s3373.json",
+              "title": "A bill to improve the Iraq and Afghanistan Service Grant and the Children of Fallen Heroes Grant.",
+              "latest_action": "Motion by Senator Schumer to reconsider the vote by which cloture on the motion to concur in the House amendment to S. 3373 was not invoked (Record Vote No. 272) entered in Senate."
+            },
+            "amendment": {},
+            "description": "A bill to improve the Iraq and Afghanistan Service Grant and the Children of Fallen Heroes Grant.",
+            "question": "On the Cloture Motion",
+            "result": "Cloture Motion Rejected",
+            "date": "2022-07-27",
+            "time": "16:48:00",
+            "total": {
+              "yes": 55,
+              "no": 42,
+              "present": 0,
+              "not_voting": 3
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "271",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/271.json",
+            "bill": {
+              "bill_id": "hr4346-117",
+              "number": "H.R.4346",
+              "sponsor_id": "R000577",
+              "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr4346.json",
+              "title": "Making appropriations for Legislative Branch for the fiscal year ending September 30, 2022, and for other purposes.",
+              "latest_action": "Motion to reconsider laid on the table Agreed to without objection."
+            },
+            "amendment": {},
+            "description": "A bill making appropriations for Legislative Branch for the fiscal year ending September 30, 2022, and for other purposes.",
+            "question": "On the Motion",
+            "result": "Motion Agreed to",
+            "date": "2022-07-27",
+            "time": "12:33:00",
+            "total": {
+              "yes": 64,
+              "no": 33,
+              "present": 0,
+              "not_voting": 3
+            },
+            "position": "No"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "270",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/270.json",
+            "bill": {
+              "bill_id": "hr4346-117",
+              "number": "H.R. 4346",
+              "sponsor_id": "R000577",
+              "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr4346.json",
+              "title": "Making appropriations for Legislative Branch for the fiscal year ending September 30, 2022, and for other purposes.",
+              "latest_action": "Motion to reconsider laid on the table Agreed to without objection."
+            },
+            "amendment": {
+              "number": "S.Amdt. 5135",
+              "api_uri": "https://api.propublica.org/congress/v1/117/amendments/samdt5135.json",
+              "sponsor_id": "S000148",
+              "sponsor": "Charles E. Schumer",
+              "sponsor_uri": "https://api.propublica.org/congress/v1/members/S000148.json",
+              "sponsor_party": "D",
+              "sponsor_state": "NY"
+            },
+            "description": "To improve the bill.",
+            "question": "On the Motion",
+            "result": "Motion Agreed to",
+            "date": "2022-07-27",
+            "time": "11:40:00",
+            "total": {
+              "yes": 64,
+              "no": 33,
+              "present": 0,
+              "not_voting": 3
+            },
+            "position": "No"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "269",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/269.json",
+            "bill": {
+              "bill_id": "hr4346-117",
+              "number": "H.R. 4346",
+              "sponsor_id": "R000577",
+              "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr4346.json",
+              "title": "Making appropriations for Legislative Branch for the fiscal year ending September 30, 2022, and for other purposes.",
+              "latest_action": "Motion to reconsider laid on the table Agreed to without objection."
+            },
+            "amendment": {
+              "number": "S.Amdt. 5135",
+              "api_uri": "https://api.propublica.org/congress/v1/117/amendments/samdt5135.json",
+              "sponsor_id": "S000148",
+              "sponsor": "Charles E. Schumer",
+              "sponsor_uri": "https://api.propublica.org/congress/v1/members/S000148.json",
+              "sponsor_party": "D",
+              "sponsor_state": "NY"
+            },
+            "description": "To improve the bill.",
+            "question": "On the Motion",
+            "result": "Motion Agreed to",
+            "date": "2022-07-26",
+            "time": "16:56:00",
+            "total": {
+              "yes": 63,
+              "no": 32,
+              "present": 0,
+              "not_voting": 5
+            },
+            "position": "No"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "268",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/268.json",
+            "bill": {
+              "bill_id": "hr4346-117",
+              "number": "H.R.4346",
+              "sponsor_id": "R000577",
+              "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr4346.json",
+              "title": "Making appropriations for Legislative Branch for the fiscal year ending September 30, 2022, and for other purposes.",
+              "latest_action": "Motion to reconsider laid on the table Agreed to without objection."
+            },
+            "amendment": {},
+            "description": "A bill making appropriations for Legislative Branch for the fiscal year ending September 30, 2022, and for other purposes.",
+            "question": "On the Cloture Motion",
+            "result": "Cloture Motion Agreed to",
+            "date": "2022-07-26",
+            "time": "22:59:00",
+            "total": {
+              "yes": 64,
+              "no": 32,
+              "present": 0,
+              "not_voting": 4
+            },
+            "position": "No"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "267",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/267.json",
+            "bill": {
+              "bill_id": "pn1843-117",
+              "number": "PN1843",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN1843-117",
+              "number": "PN1843",
+              "name": "Shereef M. Elnahal",
+              "agency": "Department of Veterans Affairs"
+            },
+            "description": "Shereef M. Elnahal, of New Jersey, to be Under Secretary for Health of the Department of Veterans Affairs",
+            "question": "On the Nomination",
+            "result": "Nomination Confirmed",
+            "date": "2022-07-21",
+            "time": "13:36:00",
+            "total": {
+              "yes": 66,
+              "no": 23,
+              "present": 0,
+              "not_voting": 11
+            },
+            "position": "Not Voting"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "266",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/266.json",
+            "bill": {
+              "bill_id": "pn1765-117",
+              "number": "PN1765",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN1765-117",
+              "number": "PN1765",
+              "name": "Reuben E. Brigety II",
+              "agency": "Department of State"
+            },
+            "description": "Reuben E. Brigety II, of Florida, to be Ambassador to the Republic of South Africa",
+            "question": "On the Nomination",
+            "result": "Nomination Confirmed",
+            "date": "2022-07-21",
+            "time": "11:50:00",
+            "total": {
+              "yes": 55,
+              "no": 40,
+              "present": 0,
+              "not_voting": 5
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "265",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/265.json",
+            "bill": {
+              "bill_id": "sconres43-117",
+              "number": "S.Con.Res.43",
+              "sponsor_id": "B001310",
+              "bill_uri": "https://api.propublica.org/congress/v1/117/bills/sconres43.json",
+              "title": "A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2023 and setting forth the appropriate budgetary levels for fiscal years 2024 through 2032.",
+              "latest_action": "Motion to proceed to consideration of measure rejected in Senate by Yea-Nay Vote. 34 - 63. Record Vote Number: 265."
+            },
+            "amendment": {},
+            "description": "A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2023 and setting forth the appropriate budgetary levels for fiscal years 2024 through 2032.",
+            "question": "On the Motion to Proceed",
+            "result": "Motion to Proceed Rejected",
+            "date": "2022-07-20",
+            "time": "17:51:00",
+            "total": {
+              "yes": 34,
+              "no": 63,
+              "present": 0,
+              "not_voting": 3
+            },
+            "position": "No"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "264",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/264.json",
+            "bill": {
+              "bill_id": "pn787-117",
+              "number": "PN787",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN787-117",
+              "number": "PN787",
+              "name": "Bernadette M. Meehan",
+              "agency": "Department of State"
+            },
+            "description": "Bernadette M. Meehan, of New York, to be Ambassador to the Republic of Chile",
+            "question": "On the Nomination",
+            "result": "Nomination Confirmed",
+            "date": "2022-07-20",
+            "time": "15:32:00",
+            "total": {
+              "yes": 51,
+              "no": 44,
+              "present": 0,
+              "not_voting": 5
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "263",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/263.json",
+            "bill": {
+              "bill_id": "pn1969-117",
+              "number": "PN1969",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN1969-117",
+              "number": "PN1969",
+              "name": "",
+              "agency": ""
+            },
+            "description": "Gregory Brian Williams, of Delaware, to be United States District Judge for the District of Delaware",
+            "question": "On the Nomination",
+            "result": "Nomination Confirmed",
+            "date": "2022-07-20",
+            "time": "14:40:00",
+            "total": {
+              "yes": 52,
+              "no": 43,
+              "present": 0,
+              "not_voting": 5
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "262",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/262.json",
+            "bill": {
+              "bill_id": "pn1969-117",
+              "number": "PN1969",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN1969-117",
+              "number": "PN1969",
+              "name": "",
+              "agency": ""
+            },
+            "description": "Gregory Brian Williams, of Delaware, to be United States District Judge for the District of Delaware",
+            "question": "On the Cloture Motion",
+            "result": "Cloture Motion Agreed to",
+            "date": "2022-07-20",
+            "time": "11:45:00",
+            "total": {
+              "yes": 52,
+              "no": 43,
+              "present": 0,
+              "not_voting": 5
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "261",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/261.json",
+            "bill": {
+              "bill_id": "hr4346-117",
+              "number": "H.R.4346",
+              "sponsor_id": "R000577",
+              "bill_uri": "https://api.propublica.org/congress/v1/117/bills/hr4346.json",
+              "title": "Making appropriations for Legislative Branch for the fiscal year ending September 30, 2022, and for other purposes.",
+              "latest_action": "Motion to reconsider laid on the table Agreed to without objection."
+            },
+            "amendment": {},
+            "description": "A bill making appropriations for Legislative Branch for the fiscal year ending September 30, 2022, and for other purposes.",
+            "question": "On the Motion to Proceed",
+            "result": "Motion to Proceed Agreed to",
+            "date": "2022-07-19",
+            "time": "18:32:00",
+            "total": {
+              "yes": 64,
+              "no": 34,
+              "present": 0,
+              "not_voting": 2
+            },
+            "position": "No"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "260",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/260.json",
+            "bill": {
+              "bill_id": "pn1671-117",
+              "number": "PN1671",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN1671-117",
+              "number": "PN1671",
+              "name": "Julianna Michelle Childs",
+              "agency": "The Judiciary"
+            },
+            "description": "Julianna Michelle Childs, of South Carolina, to be United States Circuit Judge for the District of Columbia Circuit",
+            "question": "On the Nomination",
+            "result": "Nomination Confirmed",
+            "date": "2022-07-19",
+            "time": "17:39:00",
+            "total": {
+              "yes": 64,
+              "no": 34,
+              "present": 0,
+              "not_voting": 2
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "259",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/259.json",
+            "bill": {
+              "bill_id": "pn1968-117",
+              "number": "PN1968",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN1968-117",
+              "number": "PN1968",
+              "name": "",
+              "agency": ""
+            },
+            "description": "Nancy L. Maldonado, of Illinois, to be United States District Judge for the Northern District of Illinois",
+            "question": "On the Nomination",
+            "result": "Nomination Confirmed",
+            "date": "2022-07-19",
+            "time": "14:15:00",
+            "total": {
+              "yes": 53,
+              "no": 45,
+              "present": 0,
+              "not_voting": 2
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "258",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/258.json",
+            "bill": {
+              "bill_id": "pn1968-117",
+              "number": "PN1968",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN1968-117",
+              "number": "PN1968",
+              "name": "",
+              "agency": ""
+            },
+            "description": "Nancy L. Maldonado, of Illinois, to be United States District Judge for the Northern District of Illinois",
+            "question": "On the Cloture Motion",
+            "result": "Cloture Motion Agreed to",
+            "date": "2022-07-19",
+            "time": "12:22:00",
+            "total": {
+              "yes": 53,
+              "no": 41,
+              "present": 0,
+              "not_voting": 6
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "257",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/257.json",
+            "bill": {
+              "bill_id": "pn1688-117",
+              "number": "PN1688",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN1688-117",
+              "number": "PN1688",
+              "name": "Nina Nin-Yuen Wang",
+              "agency": "The Judiciary"
+            },
+            "description": "Nina Nin-Yuen Wang, of Colorado, to be United States District Judge for the District of Colorado",
+            "question": "On the Nomination",
+            "result": "Nomination Confirmed",
+            "date": "2022-07-19",
+            "time": "11:28:00",
+            "total": {
+              "yes": 58,
+              "no": 36,
+              "present": 0,
+              "not_voting": 6
+            },
+            "position": "Yes"
+          },
+          {
+            "member_id": "S000033",
+            "chamber": "Senate",
+            "congress": "117",
+            "session": "2",
+            "roll_call": "256",
+            "vote_uri": "https://api.propublica.org/congress/v1/117/senate/sessions/2/votes/256.json",
+            "bill": {
+              "bill_id": "pn1688-117",
+              "number": "PN1688",
+              "api_uri": null,
+              "title": null,
+              "latest_action": null
+            },
+            "amendment": {},
+            "nomination": {
+              "nomination_id": "PN1688-117",
+              "number": "PN1688",
+              "name": "Nina Nin-Yuen Wang",
+              "agency": "The Judiciary"
+            },
+            "description": "Nina Nin-Yuen Wang, of Colorado, to be United States District Judge for the District of Colorado",
+            "question": "On the Cloture Motion",
+            "result": "Cloture Motion Agreed to",
+            "date": "2022-07-18",
+            "time": "17:30:00",
+            "total": {
+              "yes": 52,
+              "no": 33,
+              "present": 0,
+              "not_voting": 15
+            },
+            "position": "Yes"
+          }
+        ]
+      }
+    ]
+  }
+}

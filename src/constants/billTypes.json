@@ -1,0 +1,42 @@
+[
+  {
+    "id": "hr",
+    "chamber": "house",
+    "type": "bill"
+  },
+  {
+    "id": "hres",
+    "chamber": "house",
+    "type": "simpleResolution"
+  },
+  {
+    "id": "hconres",
+    "chamber": "house",
+    "type": "concurrentResolution"
+  },
+  {
+    "id": "hjres",
+    "chamber": "house",
+    "type": "jointResolution"
+  },
+  {
+    "id": "s",
+    "chamber": "senate",
+    "type": "bill"
+  },
+  {
+    "id": "sres",
+    "chamber": "senate",
+    "type": "simpleResolution"
+  },
+  {
+    "id": "sconres",
+    "chamber": "senate",
+    "type": "concurrentResolution"
+  },
+  {
+    "id": "sjres",
+    "chamber": "senate",
+    "type": "jointResolution"
+  }
+]

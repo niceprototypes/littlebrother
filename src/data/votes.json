@@ -1,0 +1,1096 @@
+{
+  "senate": {
+    "status": "OK",
+    "copyright": "Copyright (c) 2023 Pro Publica Inc. All Rights Reserved.",
+    "results": {
+      "chamber": "Senate",
+      "offset": 0,
+      "num_results": 20,
+      "votes": [
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 239,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00239.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00239",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/239.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN691-118",
+            "number": "PN691",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Nomination",
+          "question_text": "On the Nomination PN691",
+          "description": "Gen. Eric M. Smith, in the Marine Corps, to be General",
+          "vote_type": "1/2",
+          "date": "2023-09-21",
+          "time": "09:42:00",
+          "result": "Nomination Confirmed",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "691",
+          "document_title": "Gen. Eric M. Smith, in the Marine Corps, to be General",
+          "democratic": {
+            "yes": 47,
+            "no": 0,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 46,
+            "no": 0,
+            "present": 0,
+            "not_voting": 3,
+            "majority_position": "Yes"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 96,
+            "no": 0,
+            "present": 0,
+            "not_voting": 4
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 238,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00238.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00238",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/238.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN691-118",
+            "number": "PN691",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Cloture Motion",
+          "question_text": "On the Cloture Motion PN691",
+          "description": "Gen. Eric M. Smith, in the Marine Corps, to be General",
+          "vote_type": "1/2",
+          "date": "2023-09-21",
+          "time": "08:38:00",
+          "result": "Cloture Motion Agreed to",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "691",
+          "document_title": "Gen. Eric M. Smith, in the Marine Corps, to be General",
+          "democratic": {
+            "yes": 47,
+            "no": 0,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 46,
+            "no": 0,
+            "present": 0,
+            "not_voting": 3,
+            "majority_position": "Yes"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 96,
+            "no": 0,
+            "present": 0,
+            "not_voting": 4
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 237,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00237.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00237",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/237.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN537-118",
+            "number": "PN537",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Nomination",
+          "question_text": "On the Nomination PN537",
+          "description": "Gen. Randy A. George, in the Army, to be General",
+          "vote_type": "1/2",
+          "date": "2023-09-21",
+          "time": "07:45:00",
+          "result": "Nomination Confirmed",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "537",
+          "document_title": "Gen. Randy A. George, in the Army, to be General",
+          "democratic": {
+            "yes": 47,
+            "no": 0,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 46,
+            "no": 1,
+            "present": 0,
+            "not_voting": 2,
+            "majority_position": "Yes"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 96,
+            "no": 1,
+            "present": 0,
+            "not_voting": 3
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 236,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00236.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00236",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/236.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN537-118",
+            "number": "PN537",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Cloture Motion",
+          "question_text": "On the Cloture Motion PN537",
+          "description": "Gen. Randy A. George, in the Army, to be General",
+          "vote_type": "1/2",
+          "date": "2023-09-20",
+          "time": "15:22:00",
+          "result": "Cloture Motion Agreed to",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "537",
+          "document_title": "Gen. Randy A. George, in the Army, to be General",
+          "democratic": {
+            "yes": 45,
+            "no": 0,
+            "present": 0,
+            "not_voting": 3,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 44,
+            "no": 1,
+            "present": 0,
+            "not_voting": 4,
+            "majority_position": "Yes"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 92,
+            "no": 1,
+            "present": 0,
+            "not_voting": 7
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 235,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00235.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00235",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/235.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN677-118",
+            "number": "PN677",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Nomination",
+          "question_text": "On the Nomination PN677",
+          "description": "Gen. Charles Q. Brown, Jr., in the Air Force, to be General",
+          "vote_type": "1/2",
+          "date": "2023-09-20",
+          "time": "14:30:00",
+          "result": "Nomination Confirmed",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "677",
+          "document_title": "Gen. Charles Q. Brown, Jr., in the Air Force, to be General",
+          "democratic": {
+            "yes": 46,
+            "no": 0,
+            "present": 0,
+            "not_voting": 2,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 34,
+            "no": 11,
+            "present": 0,
+            "not_voting": 4,
+            "majority_position": "Yes"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 83,
+            "no": 11,
+            "present": 0,
+            "not_voting": 6
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 234,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00234.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00234",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/234.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN677-118",
+            "number": "PN677",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Cloture Motion",
+          "question_text": "On the Cloture Motion PN677",
+          "description": "Gen. Charles Q. Brown, Jr., in the Air Force, to be General",
+          "vote_type": "1/2",
+          "date": "2023-09-20",
+          "time": "11:31:00",
+          "result": "Cloture Motion Agreed to",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "677",
+          "document_title": "Gen. Charles Q. Brown, Jr., in the Air Force, to be General",
+          "democratic": {
+            "yes": 47,
+            "no": 0,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 39,
+            "no": 8,
+            "present": 0,
+            "not_voting": 2,
+            "majority_position": "Yes"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 89,
+            "no": 8,
+            "present": 0,
+            "not_voting": 3
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 233,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00233.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00233",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/233.json",
+          "bill": {
+            "bill_id": "hr4366-118",
+            "number": "H.R.4366",
+            "sponsor_id": "C001051",
+            "api_uri": "https://api.propublica.org/congress/v1/118/bills/hr4366.json",
+            "title": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2024, and for other purposes.",
+            "latest_action": "Considered by Senate. (consideration: CR S4609-4610, S4618-4619)"
+          },
+          "amendment": {},
+          "question": "On the Cloture Motion",
+          "question_text": "On the Cloture Motion S.Amdt. 1092 to H.R. 4366 (No short title on file)",
+          "description": "In the nature of a substitute.",
+          "vote_type": "3/5",
+          "date": "2023-09-20",
+          "time": "08:15:00",
+          "result": "Cloture Motion Rejected",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "",
+          "document_title": "",
+          "democratic": {
+            "yes": 46,
+            "no": 1,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 0,
+            "no": 47,
+            "present": 0,
+            "not_voting": 2,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 49,
+            "no": 48,
+            "present": 0,
+            "not_voting": 3
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 232,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00232.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00232",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/232.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN173-118",
+            "number": "PN173",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Nomination",
+          "question_text": "On the Nomination PN173",
+          "description": "Rita F. Lin, of California, to be United States District Judge for the Northern District of California",
+          "vote_type": "1/2",
+          "date": "2023-09-19",
+          "time": "10:15:00",
+          "result": "Nomination Confirmed",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "173",
+          "document_title": "Rita F. Lin, of California, to be United States District Judge for the Northern District of California",
+          "democratic": {
+            "yes": 46,
+            "no": 0,
+            "present": 0,
+            "not_voting": 2,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 3,
+            "no": 45,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 52,
+            "no": 45,
+            "present": 0,
+            "not_voting": 3
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 231,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00231.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00231",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/231.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN173-118",
+            "number": "PN173",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Cloture Motion",
+          "question_text": "On the Cloture Motion PN173",
+          "description": "Rita F. Lin, of California, to be United States District Judge for the Northern District of California",
+          "vote_type": "1/2",
+          "date": "2023-09-19",
+          "time": "08:27:00",
+          "result": "Cloture Motion Agreed to",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "173",
+          "document_title": "Rita F. Lin, of California, to be United States District Judge for the Northern District of California",
+          "democratic": {
+            "yes": 46,
+            "no": 0,
+            "present": 0,
+            "not_voting": 2,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 3,
+            "no": 45,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 52,
+            "no": 45,
+            "present": 0,
+            "not_voting": 3
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 230,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00230.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00230",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/230.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN591-118",
+            "number": "PN591",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Nomination",
+          "question_text": "On the Nomination PN591",
+          "description": "Vernon D. Oliver, of Connecticut, to be United States District Judge for the District of Connecticut",
+          "vote_type": "1/2",
+          "date": "2023-09-19",
+          "time": "07:31:00",
+          "result": "Nomination Confirmed",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "591",
+          "document_title": "Vernon D. Oliver, of Connecticut, to be United States District Judge for the District of Connecticut",
+          "democratic": {
+            "yes": 46,
+            "no": 0,
+            "present": 0,
+            "not_voting": 2,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 4,
+            "no": 44,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 53,
+            "no": 44,
+            "present": 0,
+            "not_voting": 3
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 229,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00229.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00229",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/229.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN591-118",
+            "number": "PN591",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Cloture Motion",
+          "question_text": "On the Cloture Motion PN591",
+          "description": "Vernon D. Oliver, of Connecticut, to be United States District Judge for the District of Connecticut",
+          "vote_type": "1/2",
+          "date": "2023-09-18",
+          "time": "13:31:00",
+          "result": "Cloture Motion Agreed to",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "591",
+          "document_title": "Vernon D. Oliver, of Connecticut, to be United States District Judge for the District of Connecticut",
+          "democratic": {
+            "yes": 47,
+            "no": 0,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 4,
+            "no": 40,
+            "present": 0,
+            "not_voting": 5,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 54,
+            "no": 40,
+            "present": 0,
+            "not_voting": 6
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 228,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00228.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00228",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/228.json",
+          "bill": {
+            "bill_id": "hr4366-118",
+            "number": "H.R.4366",
+            "sponsor_id": "C001051",
+            "api_uri": "https://api.propublica.org/congress/v1/118/bills/hr4366.json",
+            "title": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2024, and for other purposes.",
+            "latest_action": "Considered by Senate. (consideration: CR S4609-4610, S4618-4619)"
+          },
+          "amendment": {},
+          "question": "On the Motion to Proceed",
+          "question_text": "On the Motion to Proceed H.R. 4366",
+          "description": "A bill making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2024, and for other purposes.",
+          "vote_type": "1/2",
+          "date": "2023-09-14",
+          "time": "06:34:00",
+          "result": "Motion to Proceed Agreed to",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "4366",
+          "document_title": "A bill making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2024, and for other purposes.",
+          "democratic": {
+            "yes": 46,
+            "no": 0,
+            "present": 0,
+            "not_voting": 2,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 42,
+            "no": 7,
+            "present": 0,
+            "not_voting": 0,
+            "majority_position": "Yes"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 91,
+            "no": 7,
+            "present": 0,
+            "not_voting": 2
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 227,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00227.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00227",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/227.json",
+          "bill": {
+            "bill_id": "hr4366-118",
+            "number": "H.R.4366",
+            "sponsor_id": "C001051",
+            "api_uri": "https://api.propublica.org/congress/v1/118/bills/hr4366.json",
+            "title": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2024, and for other purposes.",
+            "latest_action": "Considered by Senate. (consideration: CR S4609-4610, S4618-4619)"
+          },
+          "amendment": {},
+          "question": "On the Cloture Motion",
+          "question_text": "On the Cloture Motion H.R. 4366",
+          "description": "A bill making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2024, and for other purposes.",
+          "vote_type": "3/5",
+          "date": "2023-09-12",
+          "time": "11:07:00",
+          "result": "Cloture Motion Agreed to",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "4366",
+          "document_title": "A bill making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2024, and for other purposes.",
+          "democratic": {
+            "yes": 45,
+            "no": 0,
+            "present": 0,
+            "not_voting": 3,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 37,
+            "no": 12,
+            "present": 0,
+            "not_voting": 0,
+            "majority_position": "Yes"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 85,
+            "no": 12,
+            "present": 0,
+            "not_voting": 3
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 226,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00226.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00226",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/226.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN287-118",
+            "number": "PN287",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Nomination",
+          "question_text": "On the Nomination PN287",
+          "description": "Jeffrey Irvine Cummings, of Illinois, to be United States District Judge for the Northern District of Illinois",
+          "vote_type": "1/2",
+          "date": "2023-09-12",
+          "time": "10:15:00",
+          "result": "Nomination Confirmed",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "287",
+          "document_title": "Jeffrey Irvine Cummings, of Illinois, to be United States District Judge for the Northern District of Illinois",
+          "democratic": {
+            "yes": 45,
+            "no": 0,
+            "present": 0,
+            "not_voting": 3,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 3,
+            "no": 45,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 2,
+            "no": 0,
+            "present": 0,
+            "not_voting": 1
+          },
+          "total": {
+            "yes": 50,
+            "no": 45,
+            "present": 0,
+            "not_voting": 5
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 225,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00225.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00225",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/225.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN287-118",
+            "number": "PN287",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Cloture Motion",
+          "question_text": "On the Cloture Motion PN287",
+          "description": "Jeffrey Irvine Cummings, of Illinois, to be United States District Judge for the Northern District of Illinois",
+          "vote_type": "1/2",
+          "date": "2023-09-12",
+          "time": "08:30:00",
+          "result": "Cloture Motion Agreed to",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "287",
+          "document_title": "Jeffrey Irvine Cummings, of Illinois, to be United States District Judge for the Northern District of Illinois",
+          "democratic": {
+            "yes": 45,
+            "no": 0,
+            "present": 0,
+            "not_voting": 3,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 3,
+            "no": 44,
+            "present": 0,
+            "not_voting": 2,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 51,
+            "no": 44,
+            "present": 0,
+            "not_voting": 5
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 224,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00224.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00224",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/224.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN551-118",
+            "number": "PN551",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Nomination",
+          "question_text": "On the Nomination PN551",
+          "description": "Tanya J. Bradsher, of Virginia, to be Deputy Secretary of Veterans Affairs",
+          "vote_type": "1/2",
+          "date": "2023-09-12",
+          "time": "07:30:00",
+          "result": "Nomination Confirmed",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "551",
+          "document_title": "Tanya J. Bradsher, of Virginia, to be Deputy Secretary of Veterans Affairs",
+          "democratic": {
+            "yes": 45,
+            "no": 0,
+            "present": 0,
+            "not_voting": 3,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 2,
+            "no": 46,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 50,
+            "no": 46,
+            "present": 0,
+            "not_voting": 4
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 223,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00223.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00223",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/223.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN551-118",
+            "number": "PN551",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Cloture Motion",
+          "question_text": "On the Cloture Motion PN551",
+          "description": "Tanya J. Bradsher, of Virginia, to be Deputy Secretary of Veterans Affairs",
+          "vote_type": "1/2",
+          "date": "2023-09-11",
+          "time": "13:28:00",
+          "result": "Cloture Motion Agreed to",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "551",
+          "document_title": "Tanya J. Bradsher, of Virginia, to be Deputy Secretary of Veterans Affairs",
+          "democratic": {
+            "yes": 44,
+            "no": 1,
+            "present": 0,
+            "not_voting": 3,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 2,
+            "no": 43,
+            "present": 0,
+            "not_voting": 4,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 49,
+            "no": 44,
+            "present": 0,
+            "not_voting": 7
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 222,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00222.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00222",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/222.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN673-118",
+            "number": "PN673",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Nomination",
+          "question_text": "On the Nomination PN673",
+          "description": "Anna M. Gomez, of Virginia, to be a Member of the Federal Communications Commission for a term of five years from July 1, 2021",
+          "vote_type": "1/2",
+          "date": "2023-09-07",
+          "time": "09:50:00",
+          "result": "Nomination Confirmed",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "673",
+          "document_title": "Anna M. Gomez, of Virginia, to be a Member of the Federal Communications Commission for a term of five years from July 1, 2021",
+          "democratic": {
+            "yes": 47,
+            "no": 0,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 5,
+            "no": 43,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 55,
+            "no": 43,
+            "present": 0,
+            "not_voting": 2
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 221,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00221.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00221",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/221.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN673-118",
+            "number": "PN673",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Cloture Motion",
+          "question_text": "On the Cloture Motion PN673",
+          "description": "Anna M. Gomez, of Virginia, to be a Member of the Federal Communications Commission for a term of five years from July 1, 2021",
+          "vote_type": "1/2",
+          "date": "2023-09-07",
+          "time": "08:40:00",
+          "result": "Cloture Motion Agreed to",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "673",
+          "document_title": "Anna M. Gomez, of Virginia, to be a Member of the Federal Communications Commission for a term of five years from July 1, 2021",
+          "democratic": {
+            "yes": 47,
+            "no": 0,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 5,
+            "no": 43,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 55,
+            "no": 43,
+            "present": 0,
+            "not_voting": 2
+          }
+        },
+        {
+          "congress": 118,
+          "chamber": "Senate",
+          "session": 1,
+          "roll_call": 220,
+          "source": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1181/vote_118_1_00220.xml",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=118&session=1&vote=00220",
+          "vote_uri": "https://api.propublica.org/congress/v1/118/senate/sessions/1/votes/220.json",
+          "bill": {},
+          "amendment": {},
+          "nomination": {
+            "nomination_id": "PN646-118",
+            "number": "PN646",
+            "name": "",
+            "agency": ""
+          },
+          "question": "On the Nomination",
+          "question_text": "On the Nomination PN646",
+          "description": "Adriana Debora Kugler, of Maryland, to be a Member of the Board of Governors of the Federal Reserve System for the unexpired term of fourteen years from February 1, 2012",
+          "vote_type": "1/2",
+          "date": "2023-09-07",
+          "time": "07:52:00",
+          "result": "Nomination Confirmed",
+          "tie_breaker": "",
+          "tie_breaker_vote": "",
+          "document_number": "646",
+          "document_title": "Adriana Debora Kugler, of Maryland, to be a Member of the Board of Governors of the Federal Reserve System for the unexpired term of fourteen years from February 1, 2012",
+          "democratic": {
+            "yes": 47,
+            "no": 0,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "Yes"
+          },
+          "republican": {
+            "yes": 3,
+            "no": 45,
+            "present": 0,
+            "not_voting": 1,
+            "majority_position": "No"
+          },
+          "independent": {
+            "yes": 3,
+            "no": 0,
+            "present": 0,
+            "not_voting": 0
+          },
+          "total": {
+            "yes": 53,
+            "no": 45,
+            "present": 0,
+            "not_voting": 2
+          }
+        }
+      ]
+    }
+  }
+}

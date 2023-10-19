@@ -1,0 +1,987 @@
+{
+  "lastUpdated": "2023-08-17T01:00:50-07:00",
+  "tags": {
+    "accountability": {
+      "weight": 2,
+      "emoji": "1f3db",
+      "isFlag": false,
+      "covers": []
+    },
+    "antitrust": {
+      "weight": 4,
+      "emoji": "1f4bc",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/antitrust-01-large.png",
+          "small": "/bills/antitrust-01-small.png"
+        }
+      ]
+    },
+    "guns": {
+      "weight": 4,
+      "emoji": "1f52b",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/guns-01-large.png",
+          "small": "/bills/guns-01-small.png"
+        },
+        {
+          "large": "/bills/guns-02-large.png",
+          "small": "/bills/guns-02-small.png"
+        },
+        {
+          "large": "/bills/guns-03-large.png",
+          "small": "/bills/guns-03-small.png"
+        },
+        {
+          "large": "/bills/guns-04-large.png",
+          "small": "/bills/guns-04-small.png"
+        },
+        {
+          "large": "/bills/guns-05-large.png",
+          "small": "/bills/guns-05-small.png"
+        }
+      ]
+    },
+    "armed forces": {
+      "weight": 4,
+      "emoji": "1fa96",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/armedforces-01-large.png",
+          "small": "/bills/armedforces-01-small.png"
+        },
+        {
+          "large": "/bills/armedforces-02-large.png",
+          "small": "/bills/armedforces-02-small.png"
+        },
+        {
+          "large": "/bills/armedforces-03-large.png",
+          "small": "/bills/armedforces-03-small.png"
+        }
+      ]
+    },
+    "A.I.": {
+      "weight": 5,
+      "emoji": "1f916",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/artificialintelligence-01-large.png",
+          "small": "/bills/artificialintelligence-01-small.png"
+        }
+      ]
+    },
+    "cannabis": {
+      "weight": 5,
+      "emoji": "1f33f",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/cannabis-01-large.png",
+          "small": "/bills/cannabis-01-small.png"
+        },
+        {
+          "large": "/bills/cannabis-02-large.png",
+          "small": "/bills/cannabis-02-small.png"
+        },
+        {
+          "large": "/bills/cannabis-03-large.png",
+          "small": "/bills/cannabis-03-small.png"
+        }
+      ]
+    },
+    "China": {
+      "weight": 4,
+      "emoji": [
+        127464,
+        127475
+      ],
+      "isFlag": true,
+      "covers": [
+        {
+          "large": "/bills/china-01-large.png",
+          "small": "/bills/china-01-small.png"
+        },
+        {
+          "large": "/bills/china-02-large.png",
+          "small": "/bills/china-02-small.png"
+        },
+        {
+          "large": "/bills/china-03-large.png",
+          "small": "/bills/china-03-small.png"
+        }
+      ]
+    },
+    "crime": {
+      "weight": 2,
+      "emoji": "1f6a8",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/crime-01-large.png",
+          "small": "/bills/crime-01-small.png"
+        },
+        {
+          "large": "/bills/crime-02-large.png",
+          "small": "/bills/crime-02-small.png"
+        },
+        {
+          "large": "/bills/crime-03-large.png",
+          "small": "/bills/crime-03-small.png"
+        },
+        {
+          "large": "/bills/crime-04-large.png",
+          "small": "/bills/crime-04-small.png"
+        },
+        {
+          "large": "/bills/crime-05-large.png",
+          "small": "/bills/crime-05-small.png"
+        }
+      ]
+    },
+    "crypto": {
+      "weight": 4,
+      "emoji": "1f48e",
+      "isFlag": false,
+      "covers": []
+    },
+    "culture": {
+      "weight": 1,
+      "emoji": "1f54c",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/culture-01-large.png",
+          "small": "/bills/culture-01-small.png"
+        },
+        {
+          "large": "/bills/culture-02-large.png",
+          "small": "/bills/culture-02-small.png"
+        },
+        {
+          "large": "/bills/culture-03-large.png",
+          "small": "/bills/culture-03-small.png"
+        },
+        {
+          "large": "/bills/culture-04-large.png",
+          "small": "/bills/culture-04-small.png"
+        },
+        {
+          "large": "/bills/culture-05-large.png",
+          "small": "/bills/culture-05-small.png"
+        }
+      ]
+    },
+    "economy": {
+      "weight": 2,
+      "emoji": "1f3e6",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/economy-01-large.png",
+          "small": "/bills/economy-01-small.png"
+        },
+        {
+          "large": "/bills/economy-02-large.png",
+          "small": "/bills/economy-02-small.png"
+        },
+        {
+          "large": "/bills/economy-03-large.png",
+          "small": "/bills/economy-03-small.png"
+        },
+        {
+          "large": "/bills/economy-04-large.png",
+          "small": "/bills/economy-04-small.png"
+        },
+        {
+          "large": "/bills/economy-05-large.png",
+          "small": "/bills/economy-05-small.png"
+        }
+      ]
+    },
+    "education": {
+      "weight": 2,
+      "emoji": "1f3eb",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/education-01-large.png",
+          "small": "/bills/education-01-small.png"
+        },
+        {
+          "large": "/bills/education-02-large.png",
+          "small": "/bills/education-02-small.png"
+        },
+        {
+          "large": "/bills/education-03-large.png",
+          "small": "/bills/education-03-small.png"
+        },
+        {
+          "large": "/bills/education-04-large.png",
+          "small": "/bills/education-04-small.png"
+        },
+        {
+          "large": "/bills/education-05-large.png",
+          "small": "/bills/education-05-small.png"
+        }
+      ]
+    },
+    "entitlements": {
+      "weight": 4,
+      "emoji": "1f4b0",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/entitlements-01-large.png",
+          "small": "/bills/entitlements-01-small.png"
+        },
+        {
+          "large": "/bills/entitlements-02-large.png",
+          "small": "/bills/entitlements-02-small.png"
+        }
+      ]
+    },
+    "environment": {
+      "weight": 3,
+      "emoji": "1f30e",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/environment-01-large.png",
+          "small": "/bills/environment-01-small.png"
+        },
+        {
+          "large": "/bills/environment-02-large.png",
+          "small": "/bills/environment-02-small.png"
+        }
+      ]
+    },
+    "equality": {
+      "weight": 3,
+      "emoji": "1f7f0",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/equality-01-large.png",
+          "small": "/bills/equality-01-small.png"
+        }
+      ]
+    },
+    "farming": {
+      "weight": 2,
+      "emoji": "1f69C",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/farming-01-large.png",
+          "small": "/bills/farming-01-small.png"
+        },
+        {
+          "large": "/bills/farming-02-large.png",
+          "small": "/bills/farming-02-small.png"
+        },
+        {
+          "large": "/bills/farming-03-large.png",
+          "small": "/bills/farming-03-small.png"
+        },
+        {
+          "large": "/bills/farming-04-large.png",
+          "small": "/bills/farming-04-small.png"
+        },
+        {
+          "large": "/bills/farming-05-large.png",
+          "small": "/bills/farming-05-small.png"
+        }
+      ]
+    },
+    "nutrition": {
+      "weight": 2,
+      "emoji": "1f957",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/food-01-large.png",
+          "small": "/bills/food-01-small.png"
+        },
+        {
+          "large": "/bills/food-02-large.png",
+          "small": "/bills/food-02-small.png"
+        },
+        {
+          "large": "/bills/food-03-large.png",
+          "small": "/bills/food-03-small.png"
+        },
+        {
+          "large": "/bills/food-04-large.png",
+          "small": "/bills/food-04-small.png"
+        },
+        {
+          "large": "/bills/food-05-large.png",
+          "small": "/bills/food-05-small.png"
+        }
+      ]
+    },
+    "fossil fuels": {
+      "weight": 4,
+      "emoji": "1f6e2",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/fossilfuels-01-large.png",
+          "small": "/bills/fossilfuels-01-small.png"
+        }
+      ]
+    },
+    "healthcare": {
+      "weight": 3,
+      "emoji": "1f3e5",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/healthcare-01-large.png",
+          "small": "/bills/healthcare-01-small.png"
+        },
+        {
+          "large": "/bills/healthcare-02-large.png",
+          "small": "/bills/healthcare-02-small.png"
+        },
+        {
+          "large": "/bills/healthcare-03-large.png",
+          "small": "/bills/healthcare-03-small.png"
+        },
+        {
+          "large": "/bills/healthcare-04-large.png",
+          "small": "/bills/healthcare-04-small.png"
+        },
+        {
+          "large": "/bills/healthcare-05-large.png",
+          "small": "/bills/healthcare-05-small.png"
+        }
+      ]
+    },
+    "housing": {
+      "weight": 2,
+      "emoji": "1f3e0",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/housing-01-large.png",
+          "small": "/bills/housing-01-small.png"
+        },
+        {
+          "large": "/bills/housing-02-large.png",
+          "small": "/bills/housing-02-small.png"
+        },
+        {
+          "large": "/bills/housing-03-large.png",
+          "small": "/bills/housing-03-small.png"
+        },
+        {
+          "large": "/bills/housing-04-large.png",
+          "small": "/bills/housing-04-small.png"
+        },
+        {
+          "large": "/bills/housing-05-large.png",
+          "small": "/bills/housing-05-small.png"
+        }
+      ]
+    },
+    "illegal drugs": {
+      "weight": 5,
+      "emoji": "1f36c",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/illegaldrugs-01-large.png",
+          "small": "/bills/illegaldrugs-01-small.png"
+        }
+      ]
+    },
+    "infrastructure": {
+      "weight": 3,
+      "emoji": "1f69d",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/infrastructure-01-large.png",
+          "small": "/bills/infrastructure-01-small.png"
+        },
+        {
+          "large": "/bills/infrastructure-02-large.png",
+          "small": "/bills/infrastructure-02-small.png"
+        },
+        {
+          "large": "/bills/infrastructure-03-large.png",
+          "small": "/bills/infrastructure-03-small.png"
+        },
+        {
+          "large": "/bills/infrastructure-04-large.png",
+          "small": "/bills/infrastructure-04-small.png"
+        }
+      ]
+    },
+    "Iran": {
+      "weight": 5,
+      "emoji": [
+        127470,
+        127479
+      ],
+      "isFlag": true,
+      "covers": [
+        {
+          "large": "/bills/iran-01-large.png",
+          "small": "/bills/iran-01-small.png"
+        }
+      ]
+    },
+    "Israel": {
+      "weight": 5,
+      "emoji": [
+        127470,
+        127473
+      ],
+      "isFlag": true,
+      "covers": []
+    },
+    "jobs": {
+      "weight": 2,
+      "emoji": "1f3e2",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/jobs-01-large.png",
+          "small": "/bills/jobs-01-small.png"
+        },
+        {
+          "large": "/bills/jobs-02-large.png",
+          "small": "/bills/jobs-02-small.png"
+        },
+        {
+          "large": "/bills/jobs-03-large.png",
+          "small": "/bills/jobs-03-small.png"
+        },
+        {
+          "large": "/bills/jobs-04-large.png",
+          "small": "/bills/jobs-04-small.png"
+        }
+      ]
+    },
+    "memorials": {
+      "weight": 1,
+      "emoji": "1faa6",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/memorials-01-large.png",
+          "small": "/bills/memorials-01-small.png"
+        },
+        {
+          "large": "/bills/memorials-02-large.png",
+          "small": "/bills/memorials-02-small.png"
+        }
+      ]
+    },
+    "mental health": {
+      "weight": 5,
+      "emoji": "1f9e0",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/mentalhealth-01-large.png",
+          "small": "/bills/mentalhealth-01-small.png"
+        }
+      ]
+    },
+    "pandemic": {
+      "weight": 4,
+      "emoji": "1f489",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/pandemic-01-large.png",
+          "small": "/bills/pandemic-01-small.png"
+        },
+        {
+          "large": "/bills/pandemic-02-large.png",
+          "small": "/bills/pandemic-02-small.png"
+        },
+        {
+          "large": "/bills/pandemic-03-large.png",
+          "small": "/bills/pandemic-03-small.png"
+        }
+      ]
+    },
+    "parks": {
+      "weight": 3,
+      "emoji": "1f333",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/parks-01-large.png",
+          "small": "/bills/parks-01-small.png"
+        }
+      ]
+    },
+    "post office": {
+      "weight": 5,
+      "emoji": "1f4eb",
+      "isFlag": false,
+      "covers": []
+    },
+    "Russia": {
+      "weight": 5,
+      "emoji": [
+        127479,
+        127482
+      ],
+      "isFlag": true,
+      "covers": [
+        {
+          "large": "/bills/russia-01-large.png",
+          "small": "/bills/russia-01-small.png"
+        },
+        {
+          "large": "/bills/russia-02-large.png",
+          "small": "/bills/russia-02-small.png"
+        },
+        {
+          "large": "/bills/russia-03-large.png",
+          "small": "/bills/russia-03-small.png"
+        }
+      ]
+    },
+    "security": {
+      "weight": 2,
+      "emoji": "1f6e1",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/security-01-large.png",
+          "small": "/bills/security-01-small.png"
+        },
+        {
+          "large": "/bills/security-02-large.png",
+          "small": "/bills/security-02-small.png"
+        },
+        {
+          "large": "/bills/security-03-large.png",
+          "small": "/bills/security-03-small.png"
+        },
+        {
+          "large": "/bills/security-04-large.png",
+          "small": "/bills/security-04-small.png"
+        },
+        {
+          "large": "/bills/security-05-large.png",
+          "small": "/bills/security-05-small.png"
+        },
+        {
+          "large": "/bills/security-06-large.png",
+          "small": "/bills/security-06-small.png"
+        }
+      ]
+    },
+    "taxes": {
+      "weight": 3,
+      "emoji": "1f9fe",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/taxes-01-large.png",
+          "small": "/bills/taxes-01-small.png"
+        },
+        {
+          "large": "/bills/taxes-02-large.png",
+          "small": "/bills/taxes-02-small.png"
+        }
+      ]
+    },
+    "tech": {
+      "weight": 3,
+      "emoji": "1f4bb",
+      "isFlag": false,
+      "covers": []
+    },
+    "trade": {
+      "weight": 3,
+      "emoji": "1f4b1",
+      "isFlag": false,
+      "covers": []
+    },
+    "Ukraine": {
+      "weight": 5,
+      "emoji": [
+        127482,
+        127462
+      ],
+      "isFlag": true,
+      "covers": [
+        {
+          "large": "/bills/ukraine-01-large.png",
+          "small": "/bills/ukraine-01-small.png"
+        },
+        {
+          "large": "/bills/ukraine-02-large.png",
+          "small": "/bills/ukraine-02-small.png"
+        }
+      ]
+    },
+    "unions": {
+      "weight": 2,
+      "emoji": "1f91d",
+      "isFlag": false,
+      "covers": [
+        {
+          "large": "/bills/unions-01-large.png",
+          "small": "/bills/unions-01-small.png"
+        }
+      ]
+    }
+  },
+  "matches": {
+    "accountability": {
+      "root": "accountability",
+      "accuracy": 3
+    },
+    "oversight": {
+      "root": "accountability",
+      "accuracy": 4
+    },
+    "anticompetitive": {
+      "root": "antitrust",
+      "accuracy": 5
+    },
+    "antitrust": {
+      "root": "antitrust",
+      "accuracy": 5
+    },
+    "air force": {
+      "root": "armed forces",
+      "accuracy": 5
+    },
+    "armed forces": {
+      "root": "armed forces",
+      "accuracy": 5
+    },
+    "army": {
+      "root": "armed forces",
+      "accuracy": 5
+    },
+    "navy": {
+      "root": "armed forces",
+      "accuracy": 5
+    },
+    "veterans": {
+      "root": "armed forces",
+      "accuracy": 4
+    },
+    "artificial intelligence": {
+      "root": "A.I.",
+      "accuracy": 5
+    },
+    "cannabis": {
+      "root": "cannabis",
+      "accuracy": 5
+    },
+    "china": {
+      "root": "China",
+      "accuracy": 5
+    },
+    "chinese": {
+      "root": "China",
+      "accuracy": 5
+    },
+    "crime": {
+      "root": "crime",
+      "accuracy": 5
+    },
+    "domestic violence": {
+      "root": "crime",
+      "accuracy": 5
+    },
+    "law enforcement": {
+      "root": "crime",
+      "accuracy": 4
+    },
+    "cryptocurrency": {
+      "root": "crypto",
+      "accuracy": 5
+    },
+    "heritage": {
+      "root": "culture",
+      "accuracy": 1
+    },
+    "prayer": {
+      "root": "culture",
+      "accuracy": 4
+    },
+    "religion": {
+      "root": "culture",
+      "accuracy": 4
+    },
+    "religious": {
+      "root": "culture",
+      "accuracy": 4
+    },
+    "small business": {
+      "root": "economy",
+      "accuracy": 5
+    },
+    "education": {
+      "root": "education",
+      "accuracy": 2
+    },
+    "entitlements": {
+      "root": "entitlements",
+      "accuracy": 5
+    },
+    "medicaid": {
+      "root": "entitlements",
+      "accuracy": 5
+    },
+    "medicare": {
+      "root": "entitlements",
+      "accuracy": 5
+    },
+    "social security": {
+      "root": "entitlements",
+      "accuracy": 5
+    },
+    "clean air": {
+      "root": "environment",
+      "accuracy": 5
+    },
+    "climate change": {
+      "root": "environment",
+      "accuracy": 5
+    },
+    "environmental": {
+      "root": "environment",
+      "accuracy": 3
+    },
+    "discrimination": {
+      "root": "equality",
+      "accuracy": 4
+    },
+    "agricultural": {
+      "root": "farming",
+      "accuracy": 3
+    },
+    "agriculture": {
+      "root": "farming",
+      "accuracy": 3
+    },
+    "farm": {
+      "root": "farming",
+      "accuracy": 3
+    },
+    "farming": {
+      "root": "farming",
+      "accuracy": 4
+    },
+    "fossil fuels": {
+      "root": "fossil fuels",
+      "accuracy": 5
+    },
+    "gasoline": {
+      "root": "fossil fuels",
+      "accuracy": 5
+    },
+    "oil": {
+      "root": "fossil fuels",
+      "accuracy": 4
+    },
+    "assault weapons": {
+      "root": "guns",
+      "accuracy": 5
+    },
+    "firearms": {
+      "root": "guns",
+      "accuracy": 5
+    },
+    "guns": {
+      "root": "guns",
+      "accuracy": 3
+    },
+    "cancer": {
+      "root": "healthcare",
+      "accuracy": 4
+    },
+    "healthcare": {
+      "root": "healthcare",
+      "accuracy": 3
+    },
+    "medical": {
+      "root": "healthcare",
+      "accuracy": 3
+    },
+    "homeless": {
+      "root": "housing",
+      "accuracy": 5
+    },
+    "homelessness": {
+      "root": "housing",
+      "accuracy": 5
+    },
+    "unhoused": {
+      "root": "housing",
+      "accuracy": 5
+    },
+    "controlled substances": {
+      "root": "illegal drugs",
+      "accuracy": 5
+    },
+    "drug cartels": {
+      "root": "illegal drugs",
+      "accuracy": 5
+    },
+    "illegal drugs": {
+      "root": "illegal drugs",
+      "accuracy": 5
+    },
+    "broadband": {
+      "root": "infrastructure",
+      "accuracy": 4
+    },
+    "infrastructure": {
+      "root": "infrastructure",
+      "accuracy": 3
+    },
+    "iran": {
+      "root": "Iran",
+      "accuracy": 5
+    },
+    "iranian": {
+      "root": "Iran",
+      "accuracy": 5
+    },
+    "israel": {
+      "root": "Israel",
+      "accuracy": 5
+    },
+    "israeli": {
+      "root": "Israel",
+      "accuracy": 5
+    },
+    "jobs": {
+      "root": "jobs",
+      "accuracy": 3
+    },
+    "workforce": {
+      "root": "jobs",
+      "accuracy": 5
+    },
+    "memorials": {
+      "root": "memorials",
+      "accuracy": 2
+    },
+    "depression": {
+      "root": "mental health",
+      "accuracy": 5
+    },
+    "mental health": {
+      "root": "mental health",
+      "accuracy": 5
+    },
+    "psychiatric": {
+      "root": "mental health",
+      "accuracy": 5
+    },
+    "suicide": {
+      "root": "mental health",
+      "accuracy": 5
+    },
+    "food": {
+      "root": "nutrition",
+      "accuracy": 3
+    },
+    "nutrition": {
+      "root": "nutrition",
+      "accuracy": 5
+    },
+    "covid19": {
+      "root": "pandemic",
+      "accuracy": 5
+    },
+    "pandemic": {
+      "root": "pandemic",
+      "accuracy": 5
+    },
+    "national forests": {
+      "root": "parks",
+      "accuracy": 5
+    },
+    "national parks": {
+      "root": "parks",
+      "accuracy": 5
+    },
+    "post office": {
+      "root": "post office",
+      "accuracy": 5
+    },
+    "postal": {
+      "root": "post office",
+      "accuracy": 5
+    },
+    "postmaster": {
+      "root": "post office",
+      "accuracy": 5
+    },
+    "russia": {
+      "root": "Russia",
+      "accuracy": 5
+    },
+    "russian": {
+      "root": "Russia",
+      "accuracy": 5
+    },
+    "border patrol": {
+      "root": "security",
+      "accuracy": 5
+    },
+    "border protection": {
+      "root": "security",
+      "accuracy": 5
+    },
+    "homeland security": {
+      "root": "security",
+      "accuracy": 5
+    },
+    "national security": {
+      "root": "security",
+      "accuracy": 4
+    },
+    "internal revenue": {
+      "root": "taxes",
+      "accuracy": 5
+    },
+    "innovation": {
+      "root": "tech",
+      "accuracy": 2
+    },
+    "technology": {
+      "root": "tech",
+      "accuracy": 3
+    },
+    "tariffs": {
+      "root": "trade",
+      "accuracy": 5
+    },
+    "ukraine": {
+      "root": "Ukraine",
+      "accuracy": 5
+    },
+    "ukrainian": {
+      "root": "Ukraine",
+      "accuracy": 5
+    },
+    "union representation": {
+      "root": "unions",
+      "accuracy": 5
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#8D6600;}
+	.st1{fill:url(#SVGID_1_);}
+	.st2{fill:#FFCF3A;}
+	.st3{fill:#FBBE1D;}
+</style>
+<path class="st0" d="M23.2,24H0.8V8.4l11.1-8.2l11.3,8.2V24z"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-282.9" y1="-645.7833" x2="-267.1" y2="-645.7833" gradientTransform="matrix(1 0 0 -1 287 -637.3333)">
+	<stop  offset="0" style="stop-color:#E7ECF2"/>
+	<stop  offset="1" style="stop-color:#C8D7ED"/>
+</linearGradient>
+<path class="st1" d="M19.9,0H4.1v16.9h15.8V0z"/>
+<path class="st2" d="M23.2,24H0.8V8.4l11.1,7.7l11.3-7.7C23.2,8.4,23.2,24,23.2,24z"/>
+<path class="st3" d="M0.8,24h22.4l-11.3-7.8L0.8,24z"/>
+<text transform="matrix(1 0 0 1 50 50)"><tspan x="0" y="0" style="font-family:'MyriadPro-Regular'; font-size:12px;">Home</tspan><tspan x="0" y="14.4" style="font-family:'MyriadPro-Regular'; font-size:12px;">Move Money</tspan><tspan x="0" y="28.8" style="font-family:'MyriadPro-Regular'; font-size:12px;">Activity</tspan><tspan x="0" y="43.2" style="font-family:'MyriadPro-Regular'; font-size:12px;">More</tspan></text>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "chambers": [
+    "House",
+    "Senate"
+  ],
+  "tieBreakerVotes": [
+    "Yea",
+    "Nay"
+  ],
+  "voteTypes": [
+    "YEA-AND-NAY",
+    "RECORDED VOTE",
+    "1/2",
+    "2/3",
+    "2/3 YEA-AND-NAY",
+    "3/5"
+  ]
+}
