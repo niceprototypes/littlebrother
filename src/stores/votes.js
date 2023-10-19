@@ -4,6 +4,7 @@ import moment from "moment"
 import mapVotes from "../helpers/mapVotes"
 import notify from "../helpers/notify"
 import prepareApiCall from "../helpers/prepareApiCall"
+import prepareVoteId from "../helpers/prepareVoteId"
 import validateVotes from "../helpers/validateVotes"
 import inspect from "../utils/inspect"
 
@@ -24,6 +25,10 @@ const selectors = {
     // Map correct keys to payload
     return keys.map((key) => state.payload[key])
   }),
+  vote: computed(
+    (state) => (congress, chamber, session, rollCall) =>
+      state.payload[prepareVoteId(chamber, congress, session, rollCall)]
+  ),
 }
 
 const actions = {
@@ -54,7 +59,7 @@ const actions = {
 
       // If validation error, notify
       if (!!validationError) {
-        notify(validationError)
+        console.log(validationError)
       }
 
       // Map results
@@ -78,21 +83,19 @@ const actions = {
     }
   }),
   fetchVote: thunk(async (actions, inputs = {}, helpers) => {
-    // Deconstruct helpers
-    const {getState} = helpers
-
     // Set is fetching bills
     actions.storeVote({
-      id: `${inputs.chamber}-${inputs.congress}-${inputs.rollCall}`,
+      id: prepareVoteId(inputs.chamber, inputs.congress, inputs.session, inputs.rollCall),
       error: "",
       isFetching: true,
     })
 
     try {
       const apiCall = prepareApiCall("vote", {
-        chamber: inputs.chamber.toLowerCase(),
+        chamber: inputs.chamber,
         congress: inputs.congress,
         rollCall: inputs.rollCall,
+        session: inputs.session,
       })
 
       // Fetch
@@ -111,9 +114,9 @@ const actions = {
     })
   }),
   storeVote: action((state, inputs) => {
-    // If bill is not stored
+    // If vote is not stored
     if (!state.payload[inputs.id]) {
-      // Initialize bill in store
+      // Initialize vote in store
       state.payload[inputs.id] = {}
     }
 

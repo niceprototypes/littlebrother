@@ -3,16 +3,17 @@ import React from "react"
 import styled from "styled-components"
 import Card from "./Card"
 import Flex from "./Flex"
+import FollowButton from "./FollowButton"
 import Gutter from "./Gutter"
 import LatestMajorAction from "./LatestMajorAction"
 import Separator from "./Separator"
 import Spacer from "./Spacer"
+import TapTarget from "./TapTarget"
 import Text from "./Text"
 // import CheckIcon from "./icons/Check"
 import PartyDemocratIcon from "./icons/Party.Democrat"
 import PartyIndependentIcon from "./icons/Party.Independent"
 import PartyRepublicanIcon from "./icons/Party.Republican"
-import FollowButton from "./FollowButton"
 
 const VotesItem = ({
   // amendment,
@@ -28,6 +29,7 @@ const VotesItem = ({
   isFollowing,
   // nomination,
   onClickFollow,
+  onClickVote,
   // question,
   questionText,
   republican,
@@ -46,19 +48,27 @@ const VotesItem = ({
   return (
     <Card>
       <Gutter right="small" top="small">
-        <Flex alignItems="center">
-          <Gutter all="small" horizontal="none" style={{flexGrow: 1}}>
-            <Text fontWeight="black" isBlock>
-              {questionText}
-            </Text>
-          </Gutter>
+        <Flex isWrapped={false}>
+          <div style={{flexGrow: 1}}>
+            <TapTarget onClick={onClickVote}>
+              <Gutter all="small" horizontal="none">
+                <Text fontWeight="black" isBlock>
+                  {questionText}
+                </Text>
+              </Gutter>
+            </TapTarget>
+          </div>
           <FollowButton isFollowing={isFollowing} onClickFollow={onClickFollow} />
         </Flex>
-        <Gutter all="none" right="small">
-          <Text>{description}</Text>
-        </Gutter>
+        <TapTarget isWide onClick={onClickVote}>
+          <Gutter all="none" right="small">
+            <Text>{description}</Text>
+          </Gutter>
+        </TapTarget>
       </Gutter>
-      <VotesTable democratic={democratic} independent={independent} republican={republican} total={total} />
+      <TapTarget isWide onClick={onClickVote}>
+        <VotesTable democratic={democratic} independent={independent} republican={republican} total={total} />
+      </TapTarget>
       <Gutter>
         <LatestMajorAction align="center" message={voteResult} />
       </Gutter>

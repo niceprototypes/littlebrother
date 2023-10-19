@@ -9,17 +9,29 @@ import store from "../stores"
 const Vote = ({location}) => {
   return (
     <StoreProvider store={store}>
-      <VoteScreen id={getParams("id", location.search)} />
+      <VoteScreen
+        chamber={getParams("chamber", location.search)}
+        congress={getParams("congress", location.search)}
+        rollCall={getParams("rollCall", location.search)}
+        session={getParams("session", location.search)}
+      />
     </StoreProvider>
   )
 }
 
-const VoteScreen = ({id}) => {
-  return useStoreRehydrated() ? <VoteComponent id={id} /> : <Rehydrating />
+const VoteScreen = ({chamber, congress, rollCall, session}) => {
+  return useStoreRehydrated() ? (
+    <VoteComponent chamber={chamber} congress={congress} rollCall={rollCall} session={session} />
+  ) : (
+    <Rehydrating />
+  )
 }
 
 VoteScreen.propTypes = {
-  id: PropTypes.string.isRequired,
+  chamber: PropTypes.string.isRequired,
+  congress: PropTypes.string.isRequired,
+  rollCall: PropTypes.string.isRequired,
+  session: PropTypes.string.isRequired,
 }
 
 export default Vote

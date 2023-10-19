@@ -1,7 +1,8 @@
 import api from "../constants/api.json"
+import prepareVoteId from "./prepareVoteId"
 
 function prepareApiCall(model, inputs) {
-  const isLocal = false
+  const isLocal = true
 
   const urls = {
     bills: isLocal
@@ -19,7 +20,14 @@ function prepareApiCall(model, inputs) {
     votes: isLocal
       ? `${api.local.url}:${api.local.port.votes}/${inputs.chamber}-votes${inputs.offset}`
       : `${api.remote.url}/${api.version}/${inputs.chamber}/votes/recent.json?offset=${inputs.offset}`,
-    vote: "https://api.propublica.org/api.congress/1/senate/sessions/1/votes/200.json",
+    vote: isLocal
+      ? `${api.local.url}:${api.local.port.vote}/${prepareVoteId(
+          inputs.chamber,
+          inputs.congress,
+          inputs.session,
+          inputs.rollCall
+        )}`
+      : `${api.remote.url}/${api.version}/${inputs.congress}/${inputs.chamber}/sessions/${inputs.session}/votes/${inputs.rollCall}.json`,
   }
 
   return {

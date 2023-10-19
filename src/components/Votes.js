@@ -1,5 +1,7 @@
 import {useStoreActions, useStoreState} from "easy-peasy"
+import {navigate} from "gatsby"
 import React from "react"
+import InfiniteScroll from "react-infinite-scroll-component"
 import fetchTimes from "../constants/fetchTimes.json"
 import determineShouldFetch from "../helpers/determineShouldFetch"
 import ErrorWindow from "./ErrorWindow"
@@ -8,6 +10,7 @@ import Screen from "./Screen"
 import Spacer from "./Spacer"
 import VotesItem from "./VotesItem"
 import notify from "../helpers/notify"
+import Text from "./Text"
 
 const Votes = () => {
   // Prepare actions
@@ -45,6 +48,7 @@ const Votes = () => {
 
   // If error, render error component
   if (state.error) {
+    return <div>{state.error}</div>
     return <ErrorWindow buttonLabel="Retry" error={state.error} onClickButton={() => window.location.reload()} />
   }
 
@@ -67,95 +71,96 @@ const Votes = () => {
         selected: "votes",
       }}
     >
-      {state.list.map((vote) => {
-        const {
-          amendment,
-          bill,
-          chamber,
-          congress,
-          date,
-          democratic,
-          description,
-          documentNumber,
-          documentTitle,
-          id,
-          independent,
-          nomination,
-          question,
-          questionText,
-          republican,
-          rollCall,
-          session,
-          source,
-          tieBreaker,
-          tieBreakerVote,
-          time,
-          total,
-          url,
-          voteResult,
-          voteType,
-          voteUri,
-        } = vote.payload
+      <InfiniteScroll
+        dataLength={state.list.length} //This is important field to render the next data
+        endMessage={<Text>Yay! You have seen it all</Text>}
+        hasMore={true}
+        loader={!state.followingFilterIsActive && <div style={{height: 100}}>Loading...</div>}
+        next={() => actions.fetchVotes({chamber: "senate", shouldIncrementOffset: true})}
+      >
+        {state.list.map((vote) => {
+          const {
+            amendment,
+            bill,
+            chamber,
+            congress,
+            date,
+            democratic,
+            description,
+            documentNumber,
+            documentTitle,
+            id,
+            independent,
+            nomination,
+            question,
+            questionText,
+            republican,
+            rollCall,
+            session,
+            source,
+            tieBreaker,
+            tieBreakerVote,
+            time,
+            total,
+            url,
+            voteResult,
+            voteType,
+            voteUri,
+          } = vote.payload
 
-        // Determine if following bill
-        const isFollowing = state.determineIsFollowing("votes", id)
+          // Determine if following bill
+          const isFollowing = state.determineIsFollowing("votes", id)
 
-        // Prepare bill follow handler
-        const onClickFollow = () => {
-          actions.onClickFollow({id, key: "votes"})
+          // Prepare bill follow handler
+          const onClickFollow = () => {
+            actions.onClickFollow({id, key: "votes"})
 
-          if (!isFollowing) {
-            notify(`Following Roll Call #${rollCall}`)
+            if (!isFollowing) {
+              notify(`Following Roll Call #${rollCall}`)
+            }
           }
-        }
 
-        return (
-          <div key={id}>
-            <VotesItem
-              amendment={amendment}
-              bill={bill}
-              chamber={chamber}
-              congress={congress}
-              date={date}
-              democratic={democratic}
-              description={description}
-              documentNumber={documentNumber}
-              documentTitle={documentTitle}
-              independent={independent}
-              isFollowing={isFollowing}
-              onClickFollow={onClickFollow}
-              nomination={nomination}
-              question={question}
-              questionText={questionText}
-              republican={republican}
-              rollCall={rollCall}
-              session={session}
-              source={source}
-              tieBreaker={tieBreaker}
-              tieBreakerVote={tieBreakerVote}
-              time={time}
-              total={total}
-              url={url}
-              voteResult={voteResult}
-              voteType={voteType}
-              voteUri={voteUri}
-            />
-            <Spacer size="small" />
-          </div>
-        )
+          // Prepare navigation handler
+          const onClickVote = () =>
+            navigate(`/vote?congress=${congress}&chamber=${chamber}&session=${session}&rollCall=${rollCall}`)
 
-        // return <Card></Card>
-      })}
-      {/*<Card>
-        <Gutter>
-          <Text align="center" fontSize="h1" isBlock>
-            Votes
-          </Text>
-          <Text align="center" fontSize="p2" isBlock>
-            Coming soon
-          </Text>
-        </Gutter>
-      </Card>*/}
+          return (
+            <div key={id}>
+              <VotesItem
+                amendment={amendment}
+                bill={bill}
+                chamber={chamber}
+                congress={congress}
+                date={date}
+                democratic={democratic}
+                description={description}
+                documentNumber={documentNumber}
+                documentTitle={documentTitle}
+                independent={independent}
+                isFollowing={isFollowing}
+                onClickFollow={onClickFollow}
+                onClickVote={onClickVote}
+                nomination={nomination}
+                question={question}
+                questionText={questionText}
+                republican={republican}
+                rollCall={rollCall}
+                session={session}
+                source={source}
+                tieBreaker={tieBreaker}
+                tieBreakerVote={tieBreakerVote}
+                time={time}
+                total={total}
+                url={url}
+                voteResult={voteResult}
+                voteType={voteType}
+                voteUri={voteUri}
+              />
+              <Spacer size="small" />
+            </div>
+          )
+        })}
+      </InfiniteScroll>
     </Screen>
   )
 }

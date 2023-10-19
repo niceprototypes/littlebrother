@@ -1,5 +1,5 @@
-function prepareVoteId(congress, session, rollCall) {
-  return `${congress}_${session}_${rollCall}`
+function prepareVoteId(chamber, congress, session, rollCall) {
+  return `${chamber}-${congress}-${session}-${rollCall}`
 }
 
 export default prepareVoteId

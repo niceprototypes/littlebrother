@@ -1,5 +1,6 @@
 import prepareVoteId from "./prepareVoteId"
-import validateBillId from "./validateBillId"
+
+// import validateBillId from "./validateBillId"
 
 function mapVotes(fetchedPayload, storedPayload = {}, storedKeys = []) {
   // Prepare updated keys
@@ -10,10 +11,10 @@ function mapVotes(fetchedPayload, storedPayload = {}, storedKeys = []) {
   // Iterate over fetched payload
   fetchedPayload.forEach((fetchedItem) => {
     // Destructure fetched item
-    const {congress, roll_call, session} = fetchedItem
+    const {chamber, congress, roll_call, session} = fetchedItem
 
     // Prepare vote ID
-    const id = prepareVoteId(congress, session, roll_call)
+    const id = prepareVoteId(chamber.toLowerCase(), congress, session, roll_call)
 
     // Determine if fetched item has stored key
     const hasStoredKey = storedKeys.includes(id)
@@ -67,10 +68,10 @@ function mapVotesItem(fetchedItem, storedItem) {
   } = fetchedItem
 
   // TODO: Get amendment structure
-  if (Object.keys(amendment).length > 0) {
+  /*if (Object.keys(amendment).length > 0) {
     console.log(amendment)
-    // debugger
-  }
+    debugger
+  }*/
 
   // Prepare vote payload
   const result = {}
@@ -99,7 +100,7 @@ function mapVotesItem(fetchedItem, storedItem) {
         sponsorId: bill.sponsor_id,
         title: bill.title,
       },
-      chamber,
+      chamber: chamber.toLowerCase(),
       congress,
       date,
       democratic: {
