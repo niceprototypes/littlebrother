@@ -29,10 +29,10 @@ const BillStatus = ({status}) => {
                 return (
                   <ActionDiv isLastStep={isLastStep} key={index}>
                     <Gutter>
-                      <Text fontSize="p2" fontWeight="bold" isBlock>
+                      <Text fontSize="p2" fontWeight="bold">
                         {action.message}
-                      </Text>
-                      <Text fontSize="p3">{action.date}</Text>
+                      </Text>{" "}
+                      <Text fontSize="p2">— {action.date}</Text>
                     </Gutter>
                   </ActionDiv>
                 )

@@ -11,7 +11,7 @@ function updateBillPayload(payload) {
     datePassedSenate: _datePassedSenate,
     dateVetoed: _dateVetoed,
     latestMajorAction,
-    latestMajorActionDate,
+    latestMajorActionDate: _latestMajorActionDate,
     type: typeId,
   } = payload
 
@@ -20,6 +20,7 @@ function updateBillPayload(payload) {
   const datePassedHouse = formatDate(_datePassedHouse)
   const datePassedSenate = formatDate(_datePassedSenate)
   const dateVetoed = formatDate(_dateVetoed)
+  const latestMajorActionDate = formatDate(_latestMajorActionDate)
   const latestMajorActionDateAgo = moment(latestMajorActionDate).fromNow()
 
   // Find bill type
