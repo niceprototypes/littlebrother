@@ -78,6 +78,8 @@ const Bill = ({congress, slug}) => {
 
   return (
     <Screen
+      isError={!state.bill || !!state.bill.error}
+      isFetching={state.bill.isFetching}
       navBarConfig={{
         goBack: () => navigate("/bills"),
         isFollowing,
@@ -88,58 +90,56 @@ const Bill = ({congress, slug}) => {
         ],
         onClickFollow,
       }}
+      renderError={() =>
+        !state.bill ? (
+          <ErrorWindow
+            buttonLabel="Go to bills"
+            error={`Bill ${slug} does not exist`}
+            onClickButton={() => navigate("/bills")}
+          />
+        ) : (
+          <ErrorWindow buttonLabel="Retry" error={state.bill.error} onClickButton={() => window.location.reload()} />
+        )
+      }
+      renderFetching={() => <Fetching />}
       tabBarConfig={{
         selected: "bills",
       }}
     >
-      {!state.bill ? (
-        <ErrorWindow
-          buttonLabel="Go to bills"
-          error={`Bill ${slug} does not exist`}
-          onClickButton={() => navigate("/bills")}
-        />
-      ) : state.bill.isFetching ? (
-        <Fetching />
-      ) : state.bill.error ? (
-        <ErrorWindow buttonLabel="Retry" error={state.bill.error} onClickButton={() => window.location.reload()} />
-      ) : (
-        <>
-          <Card>
-            {srcCover && (
-              <CoverDiv>
-                <img alt="TODO" src={srcCover ? srcCover.large : null} />
-              </CoverDiv>
-            )}
-            <TapTarget onClick={() => {}}>
-              <Gutter>
-                <LegislatorProfile
-                  name={sponsorName}
-                  party={sponsorParty}
-                  partyName={sponsorPartyName}
-                  srcAvatar={srcAvatar}
-                  stateName={`${sponsorTitle} ${sponsorName}`}
-                />
-              </Gutter>
-            </TapTarget>
-            {tags.length > 0 && (
-              <Gutter bottom="small" top="none">
-                <Tags tags={tags} />
-              </Gutter>
-            )}
-            <Gutter top="none">
-              <Text fontSize="h2" fontWeight="medium">
-                {title}
-              </Text>
-            </Gutter>
-          </Card>
-          <Spacer size="small" />
-          <Card title="Bill status">
-            <Gutter top="none">
-              <BillStatus status={status} />
-            </Gutter>
-          </Card>
-        </>
-      )}
+      <Card>
+        {srcCover && (
+          <CoverDiv>
+            <img alt="TODO" src={srcCover ? srcCover.large : null} />
+          </CoverDiv>
+        )}
+        <TapTarget onClick={() => {}}>
+          <Gutter>
+            <LegislatorProfile
+              name={sponsorName}
+              party={sponsorParty}
+              partyName={sponsorPartyName}
+              srcAvatar={srcAvatar}
+              stateName={`${sponsorTitle} ${sponsorName}`}
+            />
+          </Gutter>
+        </TapTarget>
+        {tags.length > 0 && (
+          <Gutter bottom="small" top="none">
+            <Tags tags={tags} />
+          </Gutter>
+        )}
+        <Gutter top="none">
+          <Text fontSize="h2" fontWeight="medium">
+            {title}
+          </Text>
+        </Gutter>
+      </Card>
+      <Spacer size="small" />
+      <Card title="Bill status">
+        <Gutter top="none">
+          <BillStatus status={status} />
+        </Gutter>
+      </Card>
     </Screen>
   )
 }
