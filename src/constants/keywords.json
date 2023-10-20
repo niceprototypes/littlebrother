@@ -496,6 +496,15 @@
         }
       ]
     },
+    "Palestine": {
+      "weight": 5,
+      "emoji": [
+        127477,
+        127480
+      ],
+      "isFlag": true,
+      "covers": []
+    },
     "pandemic": {
       "weight": 4,
       "emoji": "1f489",
@@ -902,6 +911,22 @@
     "nutrition": {
       "root": "nutrition",
       "accuracy": 5
+    },
+    "gaza": {
+      "root": "Palestine",
+      "accuracy": 5
+    },
+    "palestine": {
+      "root": "Palestine",
+      "accuracy": 5
+    },
+    "palestinian": {
+      "root": "Palestine",
+      "accuracy": 5
+    },
+    "west bank": {
+      "root": "Palestine",
+      "accuracy": 4
     },
     "covid19": {
       "root": "pandemic",
