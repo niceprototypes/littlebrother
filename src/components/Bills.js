@@ -4,7 +4,7 @@ import React from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import fetchTimes from "../constants/fetchTimes.json"
 import determineShouldFetch from "../helpers/determineShouldFetch"
-import notify from "../helpers/notify"
+// import notify from "../helpers/notify"
 import BillsItem from "./BillsItem"
 import ErrorWindow from "./ErrorWindow"
 import Fetching from "./Fetching"
@@ -110,7 +110,7 @@ const Bills = () => {
             actions.onClickFollow({id, key: "bills"})
 
             if (!isFollowing) {
-              notify(`Following ${number}`)
+              console.error(`Following ${number}`)
             }
           }
 

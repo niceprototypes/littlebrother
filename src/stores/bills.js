@@ -3,7 +3,7 @@ import {action, computed, thunk} from "easy-peasy"
 import moment from "moment"
 import mapBills from "../helpers/mapBills"
 import mapBill from "../helpers/mapBill"
-import notify from "../helpers/notify"
+// import notify from "../helpers/notify"
 import prepareApiCall from "../helpers/prepareApiCall"
 import prepareBillId from "../helpers/prepareBillId"
 import validateBill from "../helpers/validateBill"
@@ -58,7 +58,7 @@ const actions = {
 
       // If validation error, notify
       if (!!validationError) {
-        notify(validationError)
+        console.error(validationError)
       }
 
       // Map results
@@ -124,7 +124,7 @@ const actions = {
 
       // If validation error, notify
       if (!!validationError) {
-        notify(validationError)
+        console.error(validationError)
       }
       // Map results
       const mappedBill = mapBill(data.results[0], bill)

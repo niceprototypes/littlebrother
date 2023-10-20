@@ -3,7 +3,7 @@ import {action, computed, thunk} from "easy-peasy"
 import moment from "moment"
 import mapLegislators from "../helpers/mapLegislators"
 import mapLegislator from "../helpers/mapLegislator"
-import notify from "../helpers/notify"
+// import notify from "../helpers/notify"
 import prepareApiCall from "../helpers/prepareApiCall"
 import validateLegislator from "../helpers/validateLegislator"
 import validateLegislators from "../helpers/validateLegislators"
@@ -82,7 +82,7 @@ const actions = {
 
       // If validation error, notify
       if (!!validationError) {
-        notify(validationError)
+        console.error(validationError)
       }
 
       // Map results
@@ -150,7 +150,7 @@ const actions = {
 
       // If validation error, notify
       if (!!validationError) {
-        notify(validationError)
+        console.error(validationError)
       }
 
       // Map results
