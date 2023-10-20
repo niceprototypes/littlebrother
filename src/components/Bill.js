@@ -142,7 +142,7 @@ const Bill = ({congress, slug}) => {
       </Card>
       <Spacer size="small" />
       <Card title="Bill status">
-        <Gutter>
+        <Gutter top="none">
           <BillStatus status={status} />
         </Gutter>
       </Card>

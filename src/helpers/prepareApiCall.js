@@ -2,7 +2,7 @@ import api from "../constants/api.json"
 import prepareVoteId from "./prepareVoteId"
 
 function prepareApiCall(model, inputs) {
-  const isLocal = true
+  const isLocal = false
 
   const urls = {
     bills: isLocal
