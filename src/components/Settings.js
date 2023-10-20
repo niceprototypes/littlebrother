@@ -22,14 +22,18 @@ const Settings = () => {
 
   return (
     <Screen
+      navBarConfig={{
+        tabs: [
+          {
+            label: "Settings",
+          },
+        ],
+      }}
       tabBarConfig={{
         selected: "settings",
       }}
     >
       <Card>
-        <Gutter>
-          <Text fontWeight="black">Settings</Text>
-        </Gutter>
         <Gutter>
           <Flex alignItems="center" justifyContent="space-between">
             <Text>Dark mode</Text>
