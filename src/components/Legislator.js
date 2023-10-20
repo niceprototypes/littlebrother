@@ -53,23 +53,6 @@ const Legislator = ({id}) => {
     }
   }, [])
 
-  // If legislator does not exist
-  if (!state.legislator) {
-    return <div>LEGISLATOR {id} DOES NOT EXIST</div>
-  }
-
-  // If is fetching
-  if (state.legislator.isFetching) {
-    return <Fetching />
-  }
-
-  // If error
-  if (state.legislator.error) {
-    return (
-      <ErrorWindow buttonLabel="Retry" error={state.legislator.error} onClickButton={() => window.location.reload()} />
-    )
-  }
-
   const {
     accountFacebook,
     accountTwitter,
@@ -108,57 +91,71 @@ const Legislator = ({id}) => {
         selected: "chambers",
       }}
     >
-      <Card>
-        <LegislatorCover src={srcCover} />
-        <AvatarOuterDiv>
-          <AvatarInnerDiv>
-            <LegislatorAvatar partyName={partyName} size="medium" src={srcAvatar} />
-          </AvatarInnerDiv>
-        </AvatarOuterDiv>
-        <Gutter>
-          <NameDiv>
-            <Flex alignItems="center" justifyContent="center">
-              <PartyBadge party={party} size="medium" />
-              <Text fontSize="h2" fontWeight="black">
-                {displayName}
-              </Text>
-            </Flex>
-          </NameDiv>
-          <JurisdictionDiv>
-            <Flex justifyContent="center">
-              <Text fontSize="p2">
-                {stateName} {district && `${district}${prepareOrdinal(parseInt(district))}`}
-              </Text>
-            </Flex>
-          </JurisdictionDiv>
-          <Spacer />
-          <Flex justifyContent="center">
-            {accountFacebook && (
-              <ContactIconDiv>
-                <img src={facebookSrc} alt="Facebook icon" />
-              </ContactIconDiv>
-            )}
-            {accountTwitter && (
-              <ContactIconDiv>
-                <img src={twitterSrc} alt="Twitter icon" />
-              </ContactIconDiv>
-            )}
-            {accountYoutube && (
-              <ContactIconDiv>
-                <img src={youtubeSrc} alt="YouTube icon" />
-              </ContactIconDiv>
-            )}
-            {contactForm && (
-              <ContactIconDiv>
-                <img src={emailSrc} alt="Open envelope icon" />
-              </ContactIconDiv>
-            )}
-          </Flex>
-        </Gutter>
-        <Spacer />
-      </Card>
-      <Spacer size="small" />
-      <LegislatorScores party={party} scores={scores} />
+      {!state.legislator ? (
+        <div>LEGISLATOR {id} DOES NOT EXIST</div>
+      ) : state.legislator.isFetching ? (
+        <Fetching />
+      ) : state.legislator.error ? (
+        <ErrorWindow
+          buttonLabel="Retry"
+          error={state.legislator.error}
+          onClickButton={() => window.location.reload()}
+        />
+      ) : (
+        <>
+          <Card>
+            <LegislatorCover src={srcCover} />
+            <AvatarOuterDiv>
+              <AvatarInnerDiv>
+                <LegislatorAvatar partyName={partyName} size="medium" src={srcAvatar} />
+              </AvatarInnerDiv>
+            </AvatarOuterDiv>
+            <Gutter>
+              <NameDiv>
+                <Flex alignItems="center" justifyContent="center">
+                  <PartyBadge party={party} size="medium" />
+                  <Text fontSize="h2" fontWeight="black">
+                    {displayName}
+                  </Text>
+                </Flex>
+              </NameDiv>
+              <JurisdictionDiv>
+                <Flex justifyContent="center">
+                  <Text fontSize="p2">
+                    {stateName} {district && `${district}${prepareOrdinal(parseInt(district))}`}
+                  </Text>
+                </Flex>
+              </JurisdictionDiv>
+              <Spacer />
+              <Flex justifyContent="center">
+                {accountFacebook && (
+                  <ContactIconDiv>
+                    <img src={facebookSrc} alt="Facebook icon" />
+                  </ContactIconDiv>
+                )}
+                {accountTwitter && (
+                  <ContactIconDiv>
+                    <img src={twitterSrc} alt="Twitter icon" />
+                  </ContactIconDiv>
+                )}
+                {accountYoutube && (
+                  <ContactIconDiv>
+                    <img src={youtubeSrc} alt="YouTube icon" />
+                  </ContactIconDiv>
+                )}
+                {contactForm && (
+                  <ContactIconDiv>
+                    <img src={emailSrc} alt="Open envelope icon" />
+                  </ContactIconDiv>
+                )}
+              </Flex>
+            </Gutter>
+            <Spacer />
+          </Card>
+          <Spacer size="small" />
+          <LegislatorScores party={party} scores={scores} />
+        </>
+      )}
     </Screen>
   )
 }

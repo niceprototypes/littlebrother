@@ -7,6 +7,8 @@ import determineShouldFetch from "../helpers/determineShouldFetch"
 import ErrorWindow from "./ErrorWindow"
 import Fetching from "./Fetching"
 import Screen from "./Screen"
+import notify from "../helpers/notify"
+import prepareVoteId from "../helpers/prepareVoteId"
 
 const Vote = ({chamber, congress, rollCall, session}) => {
   // Prepare actions
@@ -32,34 +34,51 @@ const Vote = ({chamber, congress, rollCall, session}) => {
     }
   }, [])
 
-  // If bill does not exist
-  if (!state.bill) {
-    return <div></div>
-    return (
-      <ErrorWindow
-        buttonLabel="Go back home"
-        error={`Vote ${rollCall} does not exist`}
-        onClickButton={() => navigate("/")}
-      />
-    )
+  const id = prepareVoteId(chamber, congress, session, rollCall)
+
+  // Determine if following vote
+  const isFollowing = state.determineIsFollowing("votes", id)
+
+  // Prepare follow handler
+  const onClickFollow = () => {
+    actions.onClickFollow({id, key: "bills"})
+
+    if (!isFollowing) {
+      notify(`Following Roll Call #${rollCall}`)
+    }
   }
 
-  // If is fetching
-  if (state.vote.isFetching) {
-    return <div></div>
-    return <Fetching />
-  }
-
-  // If error
-  if (state.bill.error) {
-    return <div></div>
-    return <ErrorWindow buttonLabel="Retry" error={state.vote.error} onClickButton={() => window.location.reload()} />
-  }
-
-  // Deconstruct vote
-  const {} = state.vote.payload
-
-  return <Screen>Vote</Screen>
+  return (
+    <Screen
+      navBarConfig={{
+        goBack: () => navigate("/bills"),
+        isFollowing,
+        tabs: [
+          {
+            label: `Roll Call #${rollCall}`,
+          },
+        ],
+        onClickFollow,
+      }}
+      tabBarConfig={{
+        selected: "votes",
+      }}
+    >
+      {!state.bill ? (
+        <ErrorWindow
+          buttonLabel="Go to votes"
+          error={`Vote ${rollCall} does not exist`}
+          onClickButton={() => navigate("/votes")}
+        />
+      ) : state.vote.isFetching ? (
+        <Fetching />
+      ) : state.bill.error ? (
+        <ErrorWindow buttonLabel="Retry" error={state.vote.error} onClickButton={() => window.location.reload()} />
+      ) : (
+        <div>Vote</div>
+      )}
+    </Screen>
+  )
 }
 
 Vote.propTypes = {

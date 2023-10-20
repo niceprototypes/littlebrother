@@ -17,6 +17,7 @@ import Tags from "./Tags"
 import Text from "./Text"
 import TapTarget from "./TapTarget"
 import LegislatorProfile from "./LegislatorProfile"
+import BillsItem from "./BillsItem"
 
 const Bill = ({congress, slug}) => {
   // Prepare actions
@@ -41,27 +42,6 @@ const Bill = ({congress, slug}) => {
       actions.fetchBill({congress, slug})
     }
   }, [])
-
-  // If bill does not exist
-  if (!state.bill) {
-    return (
-      <ErrorWindow
-        buttonLabel="Go back home"
-        error={`Bill ${slug} does not exist`}
-        onClickButton={() => navigate("/")}
-      />
-    )
-  }
-
-  // If is fetching
-  if (state.bill.isFetching) {
-    return <Fetching />
-  }
-
-  // If error
-  if (state.bill.error) {
-    return <ErrorWindow buttonLabel="Retry" error={state.bill.error} onClickButton={() => window.location.reload()} />
-  }
 
   // Deconstruct bill
   const {
@@ -112,40 +92,54 @@ const Bill = ({congress, slug}) => {
         selected: "bills",
       }}
     >
-      <Card>
-        {srcCover && (
-          <CoverDiv>
-            <img alt="TODO" src={srcCover ? srcCover.large : null} />
-          </CoverDiv>
-        )}
-        <TapTarget onClick={() => {}}>
-          <Gutter>
-            <LegislatorProfile
-              name={sponsorName}
-              party={sponsorParty}
-              partyName={sponsorPartyName}
-              srcAvatar={srcAvatar}
-              stateName={`${sponsorTitle} ${sponsorName}`}
-            />
-          </Gutter>
-        </TapTarget>
-        {tags.length > 0 && (
-          <Gutter bottom="small" top="none">
-            <Tags tags={tags} />
-          </Gutter>
-        )}
-        <Gutter top="none">
-          <Text fontSize="h2" fontWeight="medium">
-            {title}
-          </Text>
-        </Gutter>
-      </Card>
-      <Spacer size="small" />
-      <Card title="Bill status">
-        <Gutter top="none">
-          <BillStatus status={status} />
-        </Gutter>
-      </Card>
+      {!state.bill ? (
+        <ErrorWindow
+          buttonLabel="Go to bills"
+          error={`Bill ${slug} does not exist`}
+          onClickButton={() => navigate("/bills")}
+        />
+      ) : state.bill.isFetching ? (
+        <Fetching />
+      ) : state.bill.error ? (
+        <ErrorWindow buttonLabel="Retry" error={state.bill.error} onClickButton={() => window.location.reload()} />
+      ) : (
+        <>
+          <Card>
+            {srcCover && (
+              <CoverDiv>
+                <img alt="TODO" src={srcCover ? srcCover.large : null} />
+              </CoverDiv>
+            )}
+            <TapTarget onClick={() => {}}>
+              <Gutter>
+                <LegislatorProfile
+                  name={sponsorName}
+                  party={sponsorParty}
+                  partyName={sponsorPartyName}
+                  srcAvatar={srcAvatar}
+                  stateName={`${sponsorTitle} ${sponsorName}`}
+                />
+              </Gutter>
+            </TapTarget>
+            {tags.length > 0 && (
+              <Gutter bottom="small" top="none">
+                <Tags tags={tags} />
+              </Gutter>
+            )}
+            <Gutter top="none">
+              <Text fontSize="h2" fontWeight="medium">
+                {title}
+              </Text>
+            </Gutter>
+          </Card>
+          <Spacer size="small" />
+          <Card title="Bill status">
+            <Gutter top="none">
+              <BillStatus status={status} />
+            </Gutter>
+          </Card>
+        </>
+      )}
     </Screen>
   )
 }

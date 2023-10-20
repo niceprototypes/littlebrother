@@ -54,16 +54,6 @@ const Chambers = ({chamber}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // If is fetching
-  if (state.isFetching) {
-    return <Fetching />
-  }
-
-  // If error, render error component
-  if (state.error) {
-    return <ErrorWindow buttonLabel="Retry" error={state.error} onClickButton={() => window.location.reload()} />
-  }
-
   return (
     <Screen
       navBarConfig={{
@@ -84,127 +74,94 @@ const Chambers = ({chamber}) => {
         selected: "chambers",
       }}
     >
-      <Card>
-        <Gutter>
-          <Gutter>
-            <Text align="center" fontSize="h1" fontWeight="bold" isBlock>
-              118th U.S. {chamber === "house" ? "House" : "Senate"}
-            </Text>
-            <Text align="center" isBlock>
-              Jan 3, 2023 – Jan 3, 2025
-            </Text>
-            <Spacer size="small" />
-            <ChamberChart
-              chartSrc={chamber === "house" ? houseSrc : senateSrc}
-              countDemocrats={state.counts.D}
-              countRepublicans={state.counts.R}
-              countIndependents={state.counts.ID}
-              countVacancies={state.counts.V}
-            />
-          </Gutter>
-        </Gutter>
-      </Card>
-      <Spacer size="small" />
-      <Card>
-        <Gutter>
-          <Flex alignItems="center">
-            <Text fontWeight="black" style={{flexGrow: 1}}>
-              Members
-            </Text>
-            <SearchInput
-              onChange={actions.updateSearch}
-              placeholder="Search by name or state"
-              value={state.search}
-              width={15}
-            />
-          </Flex>
-        </Gutter>
-        {state.list.map((legislator) => {
-          const {displayName, id, /*lastUpdated, */ party, partyName, srcAvatar, stateName} = legislator.payload
-
-          // Determine if following legislator
-          const isFollowing = state.determineIsFollowing("legislators", id)
-
-          // Prepare follow handler
-          const onClickFollow = () => {
-            actions.onClickFollow({id, key: "legislators"})
-
-            if (!isFollowing) {
-              notify(`Following ${displayName}`)
-            }
-          }
-
-          // Prepare navigation handler
-          const onClickLegislator = () => navigate(`/legislator?id=${id}`)
-
-          return (
-            <div key={id}>
-              <Gutter vertical="none">
-                <Separator />
+      {state.isFetching ? (
+        <Fetching />
+      ) : state.error ? (
+        <ErrorWindow buttonLabel="Retry" error={state.error} onClickButton={() => window.location.reload()} />
+      ) : (
+        <>
+          <Card>
+            <Gutter>
+              <Gutter>
+                <Text align="center" fontSize="h1" fontWeight="bold" isBlock>
+                  118th U.S. {chamber === "house" ? "House" : "Senate"}
+                </Text>
+                <Text align="center" isBlock>
+                  Jan 3, 2023 – Jan 3, 2025
+                </Text>
+                <Spacer size="small" />
+                <ChamberChart
+                  chartSrc={chamber === "house" ? houseSrc : senateSrc}
+                  countDemocrats={state.counts.D}
+                  countRepublicans={state.counts.R}
+                  countIndependents={state.counts.ID}
+                  countVacancies={state.counts.V}
+                />
               </Gutter>
-              <Gutter all="small">
-                <Flex>
-                  <ProfileDiv>
-                    <TapTarget isWide onClick={onClickLegislator}>
-                      <Gutter all="small">
-                        <LegislatorProfile
-                          name={displayName}
-                          party={party}
-                          partyName={partyName}
-                          srcAvatar={srcAvatar}
-                          stateName={stateName}
-                        />
-                      </Gutter>
-                    </TapTarget>
-                  </ProfileDiv>
-                  <FollowButton isFollowing={isFollowing} onClickFollow={onClickFollow} />
-                </Flex>
-              </Gutter>
-            </div>
-          )
-        })}
-      </Card>
-      {/*<Card>
-        <Gutter>
-          <Text>Leadership</Text>
-          <Gutter horizontal="none">
-            <Flex alignItems="center">
-              <LegislatorAvatar src="/images/legislators/S000148-avatar.jpeg" />
-              <div>
-                <Text>Senate majority leader</Text>
-                <Text>Charles E. Schumer</Text>
-                <Text>Democrat, NY</Text>
-              </div>
-            </Flex>
-          </Gutter>
-          <Separator />
-          <Gutter horizontal="none">
-            <Flex alignItems="center">
-              <LegislatorAvatar src="/images/legislators/M000355-avatar.jpeg" />
-              <div>
-                <Text>Senate minority leader</Text>
-                <Text>Mitch McConnell</Text>
-                <Text>Republican, KY</Text>
-              </div>
-            </Flex>
-          </Gutter>
-        </Gutter>
-      </Card>
-      <Spacer height="small" />*/}
-      {/*<Card>
-        <Gutter>
-          <Gutter>
-            <ChamberChart
-              chartSrc={houseSrc}
-              countDemocrats={220}
-              countRepublicans={212}
-              countVacancies={3}
-              period="Jan 3, 2021 – Jan 3, 2023"
-              title="117th U.S. House of Representatives"
-            />
-          </Gutter>
-        </Gutter>
-      </Card>*/}
+            </Gutter>
+          </Card>
+          <Spacer size="small" />
+          <Card>
+            <Gutter>
+              <Flex alignItems="center">
+                <Text fontWeight="black" style={{flexGrow: 1}}>
+                  Members
+                </Text>
+                <SearchInput
+                  onChange={actions.updateSearch}
+                  placeholder="Search by name or state"
+                  value={state.search}
+                  width={15}
+                />
+              </Flex>
+            </Gutter>
+            {state.list.map((legislator) => {
+              const {displayName, id, /*lastUpdated, */ party, partyName, srcAvatar, stateName} = legislator.payload
+
+              // Determine if following legislator
+              const isFollowing = state.determineIsFollowing("legislators", id)
+
+              // Prepare follow handler
+              const onClickFollow = () => {
+                actions.onClickFollow({id, key: "legislators"})
+
+                if (!isFollowing) {
+                  notify(`Following ${displayName}`)
+                }
+              }
+
+              // Prepare navigation handler
+              const onClickLegislator = () => navigate(`/legislator?id=${id}`)
+
+              return (
+                <div key={id}>
+                  <Gutter vertical="none">
+                    <Separator />
+                  </Gutter>
+                  <Gutter all="small">
+                    <Flex>
+                      <ProfileDiv>
+                        <TapTarget isWide onClick={onClickLegislator}>
+                          <Gutter all="small">
+                            <LegislatorProfile
+                              name={displayName}
+                              party={party}
+                              partyName={partyName}
+                              srcAvatar={srcAvatar}
+                              stateName={stateName}
+                            />
+                          </Gutter>
+                        </TapTarget>
+                      </ProfileDiv>
+                      <FollowButton isFollowing={isFollowing} onClickFollow={onClickFollow} />
+                    </Flex>
+                  </Gutter>
+                </div>
+              )
+            })}
+          </Card>
+        </>
+      )}
     </Screen>
   )
 }

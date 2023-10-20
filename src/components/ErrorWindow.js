@@ -10,23 +10,17 @@ const ErrorWindow = ({error, buttonLabel, onClickButton}) => {
   return (
     <OuterDiv>
       <Gutter vertical="none">
-        <InnerDiv>
-          <Gutter horizontal="none">
-            <Gutter>
-              <Text fontWeight="bold">{error}</Text>
-              <Spacer />
-              <Button label={buttonLabel} onClick={onClickButton} />
-            </Gutter>
-          </Gutter>
-        </InnerDiv>
+        <Gutter vertical="none">
+          <Text fontSize="h2" fontWeight="bold">
+            {error}
+          </Text>
+          <Spacer />
+          <Button label={buttonLabel} onClick={onClickButton} />
+        </Gutter>
       </Gutter>
     </OuterDiv>
   )
 }
-
-const InnerDiv = styled.div`
-  background-color: ${(props) => props.theme.color.background.primary};
-`
 
 const OuterDiv = styled.div`
   left: 0;

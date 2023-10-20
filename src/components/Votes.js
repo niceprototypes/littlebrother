@@ -41,17 +41,6 @@ const Votes = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // If is fetching for the first time
-  if (state.isFetching && !state.list.length) {
-    return <Fetching />
-  }
-
-  // If error, render error component
-  if (state.error) {
-    return <div>{state.error}</div>
-    return <ErrorWindow buttonLabel="Retry" error={state.error} onClickButton={() => window.location.reload()} />
-  }
-
   return (
     <Screen
       navBarConfig={{
@@ -71,96 +60,102 @@ const Votes = () => {
         selected: "votes",
       }}
     >
-      <InfiniteScroll
-        dataLength={state.list.length} //This is important field to render the next data
-        endMessage={<Text>Yay! You have seen it all</Text>}
-        hasMore={true}
-        loader={!state.followingFilterIsActive && <div style={{height: 100}}>Loading...</div>}
-        next={() => actions.fetchVotes({chamber: "senate", shouldIncrementOffset: true})}
-      >
-        {state.list.map((vote) => {
-          const {
-            amendment,
-            bill,
-            chamber,
-            congress,
-            date,
-            democratic,
-            description,
-            documentNumber,
-            documentTitle,
-            id,
-            independent,
-            nomination,
-            question,
-            questionText,
-            republican,
-            rollCall,
-            session,
-            source,
-            tieBreaker,
-            tieBreakerVote,
-            time,
-            total,
-            url,
-            voteResult,
-            voteType,
-            voteUri,
-          } = vote.payload
+      {state.isFetching && !state.list.length ? (
+        <Fetching />
+      ) : state.error ? (
+        <ErrorWindow buttonLabel="Retry" error={state.error} onClickButton={() => window.location.reload()} />
+      ) : (
+        <InfiniteScroll
+          dataLength={state.list.length} //This is important field to render the next data
+          endMessage={<Text>Yay! You have seen it all</Text>}
+          hasMore={true}
+          loader={!state.followingFilterIsActive && <div style={{height: 100}}>Loading...</div>}
+          next={() => actions.fetchVotes({chamber: "senate", shouldIncrementOffset: true})}
+        >
+          {state.list.map((vote) => {
+            const {
+              amendment,
+              bill,
+              chamber,
+              congress,
+              date,
+              democratic,
+              description,
+              documentNumber,
+              documentTitle,
+              id,
+              independent,
+              nomination,
+              question,
+              questionText,
+              republican,
+              rollCall,
+              session,
+              source,
+              tieBreaker,
+              tieBreakerVote,
+              time,
+              total,
+              url,
+              voteResult,
+              voteType,
+              voteUri,
+            } = vote.payload
 
-          // Determine if following bill
-          const isFollowing = state.determineIsFollowing("votes", id)
+            // Determine if following bill
+            const isFollowing = state.determineIsFollowing("votes", id)
 
-          // Prepare bill follow handler
-          const onClickFollow = () => {
-            actions.onClickFollow({id, key: "votes"})
+            // Prepare bill follow handler
+            const onClickFollow = () => {
+              actions.onClickFollow({id, key: "votes"})
 
-            if (!isFollowing) {
-              notify(`Following Roll Call #${rollCall}`)
+              if (!isFollowing) {
+                notify(`Following Roll Call #${rollCall}`)
+              }
             }
-          }
 
-          // Prepare navigation handler
-          const onClickVote = () =>
-            navigate(`/vote?congress=${congress}&chamber=${chamber}&session=${session}&rollCall=${rollCall}`)
+            // Prepare navigation handler
+            const onClickVote = () =>
+              navigate(`/vote?congress=${congress}&chamber=${chamber}&session=${session}&rollCall=${rollCall}`)
 
-          return (
-            <div key={id}>
-              <VotesItem
-                amendment={amendment}
-                bill={bill}
-                chamber={chamber}
-                congress={congress}
-                date={date}
-                democratic={democratic}
-                description={description}
-                documentNumber={documentNumber}
-                documentTitle={documentTitle}
-                independent={independent}
-                isFollowing={isFollowing}
-                onClickFollow={onClickFollow}
-                onClickVote={onClickVote}
-                nomination={nomination}
-                question={question}
-                questionText={questionText}
-                republican={republican}
-                rollCall={rollCall}
-                session={session}
-                source={source}
-                tieBreaker={tieBreaker}
-                tieBreakerVote={tieBreakerVote}
-                time={time}
-                total={total}
-                url={url}
-                voteResult={voteResult}
-                voteType={voteType}
-                voteUri={voteUri}
-              />
-              <Spacer size="small" />
-            </div>
-          )
-        })}
-      </InfiniteScroll>
+            return (
+              <div key={id}>
+                <VotesItem
+                  amendment={amendment}
+                  bill={bill}
+                  chamber={chamber}
+                  congress={congress}
+                  date={date}
+                  democratic={democratic}
+                  description={description}
+                  documentNumber={documentNumber}
+                  documentTitle={documentTitle}
+                  independent={independent}
+                  isFollowing={isFollowing}
+                  onClickFollow={onClickFollow}
+                  onClickVote={onClickVote}
+                  nomination={nomination}
+                  question={question}
+                  questionText={questionText}
+                  republican={republican}
+                  rollCall={rollCall}
+                  session={session}
+                  source={source}
+                  tieBreaker={tieBreaker}
+                  tieBreakerVote={tieBreakerVote}
+                  time={time}
+                  total={total}
+                  url={url}
+                  voteResult={voteResult}
+                  voteType={voteType}
+                  voteUri={voteUri}
+                />
+                <Spacer size="small" />
+              </div>
+            )
+          })}
+        </InfiniteScroll>
+      )}
     </Screen>
   )
 }
