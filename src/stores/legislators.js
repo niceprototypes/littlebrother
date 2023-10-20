@@ -67,8 +67,10 @@ const actions = {
     // Prepare state
     const state = getState()
 
-    // Set is fetching legislators
-    state.isFetching = true
+    // Set is fetching bills
+    actions.storeLegislators({
+      isFetching: true,
+    })
 
     try {
       // Prepare API call

@@ -43,6 +43,8 @@ const Bills = () => {
 
   return (
     <Screen
+      isError={!!state.error}
+      isFetching={state.isFetching && !state.list.length}
       navBarConfig={{
         tabs: [
           {
@@ -56,91 +58,89 @@ const Bills = () => {
           },
         ],
       }}
+      renderError={() => (
+        <ErrorWindow buttonLabel="Retry" error={state.error} onClickButton={() => window.location.reload()} />
+      )}
+      renderFetching={() => <Fetching />}
       tabBarConfig={{
         selected: "bills",
       }}
     >
-      {state.isFetching && !state.list.length ? (
-        <Fetching />
-      ) : state.error ? (
-        <ErrorWindow buttonLabel="Retry" error={state.error} onClickButton={() => window.location.reload()} />
-      ) : (
-        <InfiniteScroll
-          dataLength={state.list.length} //This is important field to render the next data
-          endMessage={<Text>Yay! You have seen it all</Text>}
-          hasMore={true}
-          loader={!state.followingFilterIsActive && <div style={{height: 100}}>Loading...</div>}
-          next={() => actions.fetchBills({shouldIncrementOffset: true})}
-        >
-          {state.list.map((bill) => {
-            const {
-              congress,
-              id,
-              slug,
-              latestMajorActionDateAgo,
-              latestMajorAction,
-              latestMajorActionDate,
-              number,
-              sponsorId,
-              sponsorName,
-              sponsorParty,
-              sponsorPartyName,
-              sponsorState,
-              sponsorTitle,
-              srcAvatar,
-              srcCover,
-              status,
-              tags,
-              title,
-            } = bill.payload
+      <InfiniteScroll
+        dataLength={state.list.length} //This is important field to render the next data
+        endMessage={<Text>Yay! You have seen it all</Text>}
+        hasMore={true}
+        loader={!state.followingFilterIsActive && <div style={{height: 100}}>Loading...</div>}
+        next={() => actions.fetchBills({shouldIncrementOffset: true})}
+      >
+        {state.list.map((bill) => {
+          const {
+            congress,
+            id,
+            slug,
+            latestMajorActionDateAgo,
+            latestMajorAction,
+            latestMajorActionDate,
+            number,
+            sponsorId,
+            sponsorName,
+            sponsorParty,
+            sponsorPartyName,
+            sponsorState,
+            sponsorTitle,
+            srcAvatar,
+            srcCover,
+            status,
+            tags,
+            title,
+          } = bill.payload
 
-            // Determine if following bill
-            const isFollowing = state.determineIsFollowing("bills", id)
+          // Determine if following bill
+          const isFollowing = state.determineIsFollowing("bills", id)
 
-            // Prepare bill click handler
-            const onClickBill = () => navigate(`/bill?congress=${congress}&slug=${slug}`)
+          // Prepare bill click handler
+          const onClickBill = () => navigate(`/bill?congress=${congress}&slug=${slug}`)
 
-            // Prepare bill follow handler
-            const onClickFollow = () => {
-              actions.onClickFollow({id, key: "bills"})
+          // Prepare bill follow handler
+          const onClickFollow = () => {
+            actions.onClickFollow({id, key: "bills"})
 
-              if (!isFollowing) {
-                notify(`Following ${number}`)
-              }
+            if (!isFollowing) {
+              notify(`Following ${number}`)
             }
+          }
 
-            // Prepare navigation handler
-            const onClickLegislator = () => navigate(`/legislator?id=${sponsorId}`)
+          // Prepare navigation handler
+          const onClickLegislator = () => navigate(`/legislator?id=${sponsorId}`)
 
-            return (
-              <div key={id}>
-                <BillsItem
-                  date={latestMajorActionDateAgo}
-                  isFollowing={isFollowing}
-                  latestMajorAction={latestMajorAction}
-                  latestMajorActionDate={latestMajorActionDate}
-                  number={number}
-                  onClickBill={onClickBill}
-                  onClickFollow={onClickFollow}
-                  onClickLegislator={onClickLegislator}
-                  sponsorName={sponsorName}
-                  sponsorParty={sponsorParty}
-                  sponsorPartyName={sponsorPartyName}
-                  sponsorState={sponsorState}
-                  sponsorTitle={sponsorTitle}
-                  srcAvatar={srcAvatar}
-                  srcCover={srcCover}
-                  status={status}
-                  tags={tags}
-                  title={title}
-                />
-                <Spacer size="small" />
-              </div>
-            )
-          })}
-          <Spacer />
-        </InfiniteScroll>
-      )}
+          return (
+            <div key={id}>
+              <BillsItem
+                date={latestMajorActionDateAgo}
+                isFollowing={isFollowing}
+                latestMajorAction={latestMajorAction}
+                latestMajorActionDate={latestMajorActionDate}
+                number={number}
+                onClickBill={onClickBill}
+                onClickFollow={onClickFollow}
+                onClickLegislator={onClickLegislator}
+                sponsorName={sponsorName}
+                sponsorParty={sponsorParty}
+                sponsorPartyName={sponsorPartyName}
+                sponsorState={sponsorState}
+                sponsorTitle={sponsorTitle}
+                srcAvatar={srcAvatar}
+                srcCover={srcCover}
+                status={status}
+                tags={tags}
+                title={title}
+              />
+              <Spacer size="small" />
+            </div>
+          )
+        })}
+        <Spacer />
+      </InfiniteScroll>
     </Screen>
   )
 }

@@ -82,80 +82,84 @@ const Legislator = ({id}) => {
 
   return (
     <Screen
+      isError={!state.legislator || !!state.legislator.error}
+      isFetching={state.legislator.isFetching}
       navBarConfig={{
         goBack: () => navigate("/chambers?chamber=senate"),
         isFollowing,
         onClickFollow,
       }}
+      renderError={() =>
+        !state.legislator ? (
+          <ErrorWindow
+            buttonLabel="Go to chambers"
+            error={`Legislator ${id} does not exist`}
+            onClickButton={() => navigate("/chambers")}
+          />
+        ) : (
+          <ErrorWindow
+            buttonLabel="Retry"
+            error={state.legislator.error}
+            onClickButton={() => window.location.reload()}
+          />
+        )
+      }
+      renderFetching={() => <Fetching />}
       tabBarConfig={{
         selected: "chambers",
       }}
     >
-      {!state.legislator ? (
-        <div>LEGISLATOR {id} DOES NOT EXIST</div>
-      ) : state.legislator.isFetching ? (
-        <Fetching />
-      ) : state.legislator.error ? (
-        <ErrorWindow
-          buttonLabel="Retry"
-          error={state.legislator.error}
-          onClickButton={() => window.location.reload()}
-        />
-      ) : (
-        <>
-          <Card>
-            <LegislatorCover src={srcCover} />
-            <AvatarOuterDiv>
-              <AvatarInnerDiv>
-                <LegislatorAvatar partyName={partyName} size="medium" src={srcAvatar} />
-              </AvatarInnerDiv>
-            </AvatarOuterDiv>
-            <Gutter>
-              <NameDiv>
-                <Flex alignItems="center" justifyContent="center">
-                  <PartyBadge party={party} size="medium" />
-                  <Text fontSize="h2" fontWeight="black">
-                    {displayName}
-                  </Text>
-                </Flex>
-              </NameDiv>
-              <JurisdictionDiv>
-                <Flex justifyContent="center">
-                  <Text fontSize="p2">
-                    {stateName} {district && `${district}${prepareOrdinal(parseInt(district))}`}
-                  </Text>
-                </Flex>
-              </JurisdictionDiv>
-              <Spacer />
-              <Flex justifyContent="center">
-                {accountFacebook && (
-                  <ContactIconDiv>
-                    <img src={facebookSrc} alt="Facebook icon" />
-                  </ContactIconDiv>
-                )}
-                {accountTwitter && (
-                  <ContactIconDiv>
-                    <img src={twitterSrc} alt="Twitter icon" />
-                  </ContactIconDiv>
-                )}
-                {accountYoutube && (
-                  <ContactIconDiv>
-                    <img src={youtubeSrc} alt="YouTube icon" />
-                  </ContactIconDiv>
-                )}
-                {contactForm && (
-                  <ContactIconDiv>
-                    <img src={emailSrc} alt="Open envelope icon" />
-                  </ContactIconDiv>
-                )}
-              </Flex>
-            </Gutter>
-            <Spacer />
-          </Card>
-          <Spacer size="small" />
-          <LegislatorScores party={party} scores={scores} />
-        </>
-      )}
+      <Card>
+        <LegislatorCover src={srcCover} />
+        <AvatarOuterDiv>
+          <AvatarInnerDiv>
+            <LegislatorAvatar partyName={partyName} size="medium" src={srcAvatar} />
+          </AvatarInnerDiv>
+        </AvatarOuterDiv>
+        <Gutter>
+          <NameDiv>
+            <Flex alignItems="center" justifyContent="center">
+              <PartyBadge party={party} size="medium" />
+              <Text fontSize="h2" fontWeight="black">
+                {displayName}
+              </Text>
+            </Flex>
+          </NameDiv>
+          <JurisdictionDiv>
+            <Flex justifyContent="center">
+              <Text fontSize="p2">
+                {stateName} {district && `${district}${prepareOrdinal(parseInt(district))}`}
+              </Text>
+            </Flex>
+          </JurisdictionDiv>
+          <Spacer />
+          <Flex justifyContent="center">
+            {accountFacebook && (
+              <ContactIconDiv>
+                <img src={facebookSrc} alt="Facebook icon" />
+              </ContactIconDiv>
+            )}
+            {accountTwitter && (
+              <ContactIconDiv>
+                <img src={twitterSrc} alt="Twitter icon" />
+              </ContactIconDiv>
+            )}
+            {accountYoutube && (
+              <ContactIconDiv>
+                <img src={youtubeSrc} alt="YouTube icon" />
+              </ContactIconDiv>
+            )}
+            {contactForm && (
+              <ContactIconDiv>
+                <img src={emailSrc} alt="Open envelope icon" />
+              </ContactIconDiv>
+            )}
+          </Flex>
+        </Gutter>
+        <Spacer />
+      </Card>
+      <Spacer size="small" />
+      <LegislatorScores party={party} scores={scores} />
     </Screen>
   )
 }

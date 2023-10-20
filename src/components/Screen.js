@@ -15,7 +15,8 @@ import NavBar from "./NavBar"
 import Spacer from "./Spacer"
 import TabBar from "./TabBar"
 
-const Screen = ({children, navBarConfig, tabBarConfig}) => {
+const Screen = ({children, isError, isFetching, navBarConfig, renderError, renderFetching, tabBarConfig}) => {
+  console.log(isFetching)
   const state = useStoreState((state) => ({
     isDarkMode: state.settings.isDarkMode,
   }))
@@ -25,11 +26,12 @@ const Screen = ({children, navBarConfig, tabBarConfig}) => {
 
   return (
     <ThemeProvider theme={Theme[state.isDarkMode ? "dark" : "light"]}>
-      <OuterDiv hasTabBar={!!tabBarConfig} isSafari={isSafari}>
+      <OuterDiv hasTabBar={!!tabBarConfig} isFetching={isFetching} isSafari={isSafari}>
         <GlobalStyle />
         {navBarConfig && <NavBar navBarConfig={navBarConfig} />}
         {tabBarConfig && <TabBar isDarkMode={state.isDarkMode} isSafari={isSafari} tabBarConfig={tabBarConfig} />}
         {children}
+        {isFetching && <FetchingDiv>{renderFetching()}</FetchingDiv>}
         <Spacer size="small" />
         <Toaster />
       </OuterDiv>
@@ -101,9 +103,32 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const OuterDiv = styled(({hasTabBar, isSafari, ...props}) => <div {...props} />)`
+const FetchingDiv = styled.div`
+  animation: fade-in 0.45s forwards;
+  background-color: rgba(255, 255, 255, 0.85);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  @keyframes fade-in {
+    33% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`
+
+const OuterDiv = styled(({hasTabBar, isFetching, isSafari, ...props}) => <div {...props} />)`
   background-color: ${(props) => props.theme.color.background.secondary};
+  height: ${(props) => props.isFetching && "100vh"};
   min-height: 100vh;
+  overflow: ${(props) => props.isFetching && "hidden"};
   padding-bottom: ${(props) =>
     props.hasTabBar && props.isSafari ? props.theme.tabBar.heightSafari : props.theme.tabBar.height}px;
   @media only screen and (min-width: 720px) {
@@ -114,6 +139,8 @@ const OuterDiv = styled(({hasTabBar, isSafari, ...props}) => <div {...props} />)
 
 Screen.propTypes = {
   children: PropTypes.node.isRequired,
+  isError: PropTypes.bool.isRequired,
+  isFetching: PropTypes.bool.isRequired,
   navBarConfig: PropTypes.shape({
     goBack: PropTypes.func,
     isFollowing: PropTypes.bool,
@@ -126,12 +153,18 @@ Screen.propTypes = {
       })
     ),
   }),
+  renderError: PropTypes.func,
+  renderFetching: PropTypes.func,
   tabBarConfig: PropTypes.shape({
     selected: PropTypes.oneOf(["bills", "chambers", "settings", "votes"]),
   }),
 }
 
 Screen.defaultProps = {
+  isError: false,
+  isFetching: false,
+  renderError: null,
+  renderFetching: null,
   navBarConfig: null,
   tabBarConfig: null,
 }

@@ -50,6 +50,19 @@ const Vote = ({chamber, congress, rollCall, session}) => {
 
   return (
     <Screen
+      isError={!state.vote || !!state.vote.error}
+      renderError={() =>
+        !state.vote ? (
+          <ErrorWindow
+            buttonLabel="Go to votes"
+            error={`Vote ${rollCall} does not exist`}
+            onClickButton={() => navigate("/votes")}
+          />
+        ) : (
+          <ErrorWindow buttonLabel="Retry" error={state.vote.error} onClickButton={() => window.location.reload()} />
+        )
+      }
+      renderFetching={() => <Fetching />}
       navBarConfig={{
         goBack: () => navigate("/bills"),
         isFollowing,
@@ -64,20 +77,7 @@ const Vote = ({chamber, congress, rollCall, session}) => {
         selected: "votes",
       }}
     >
-      <ErrorWindow buttonLabel="Go home" error="Under construction" onClickButton={() => navigate("/votes")} />
-      {/*{!state.bill ? (
-        <ErrorWindow
-          buttonLabel="Go to votes"
-          error={`Vote ${rollCall} does not exist`}
-          onClickButton={() => navigate("/votes")}
-        />
-      ) : state.vote.isFetching ? (
-        <Fetching />
-      ) : state.bill.error ? (
-        <ErrorWindow buttonLabel="Retry" error={state.vote.error} onClickButton={() => window.location.reload()} />
-      ) : (
-        <div>Vote</div>
-      )}*/}
+      <div>Vote</div>
     </Screen>
   )
 }
