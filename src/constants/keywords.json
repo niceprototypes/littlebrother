@@ -445,7 +445,12 @@
         127473
       ],
       "isFlag": true,
-      "covers": []
+      "covers": [
+        {
+          "large": "/bills/israel-01-large.png",
+          "small": "/bills/israel-01-small.png"
+        }
+      ]
     },
     "jobs": {
       "weight": 2,
@@ -503,7 +508,12 @@
         127480
       ],
       "isFlag": true,
-      "covers": []
+      "covers": [
+        {
+          "large": "/bills/palestine-01-large.png",
+          "small": "/bills/palestine-01-small.png"
+        }
+      ]
     },
     "pandemic": {
       "weight": 4,
