@@ -64,7 +64,8 @@ const Vote = ({chamber, congress, rollCall, session}) => {
         selected: "votes",
       }}
     >
-      {!state.bill ? (
+      <ErrorWindow buttonLabel="Go home" error="Under construction" onClickButton={() => navigate("/votes")} />
+      {/*{!state.bill ? (
         <ErrorWindow
           buttonLabel="Go to votes"
           error={`Vote ${rollCall} does not exist`}
@@ -76,7 +77,7 @@ const Vote = ({chamber, congress, rollCall, session}) => {
         <ErrorWindow buttonLabel="Retry" error={state.vote.error} onClickButton={() => window.location.reload()} />
       ) : (
         <div>Vote</div>
-      )}
+      )}*/}
     </Screen>
   )
 }
