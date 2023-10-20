@@ -449,6 +449,22 @@
         {
           "large": "/bills/israel-01-large.png",
           "small": "/bills/israel-01-small.png"
+        },
+        {
+          "large": "/bills/israel-02-large.png",
+          "small": "/bills/israel-02-small.png"
+        },
+        {
+          "large": "/bills/israel-03-large.png",
+          "small": "/bills/israel-03-small.png"
+        },
+        {
+          "large": "/bills/israel-04-large.png",
+          "small": "/bills/israel-04-small.png"
+        },
+        {
+          "large": "/bills/israel-05-large.png",
+          "small": "/bills/israel-05-small.png"
         }
       ]
     },
@@ -512,6 +528,22 @@
         {
           "large": "/bills/palestine-01-large.png",
           "small": "/bills/palestine-01-small.png"
+        },
+        {
+          "large": "/bills/palestine-02-large.png",
+          "small": "/bills/palestine-02-small.png"
+        },
+        {
+          "large": "/bills/palestine-03-large.png",
+          "small": "/bills/palestine-03-small.png"
+        },
+        {
+          "large": "/bills/palestine-04-large.png",
+          "small": "/bills/palestine-04-small.png"
+        },
+        {
+          "large": "/bills/palestine-05-large.png",
+          "small": "/bills/palestine-05-small.png"
         }
       ]
     },
