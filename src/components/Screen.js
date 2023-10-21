@@ -137,7 +137,7 @@ const OuterDiv = styled(({hasTabBar, isFetching, isSafari, ...props}) => <div {.
 `
 
 Screen.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   isError: PropTypes.bool.isRequired,
   isFetching: PropTypes.bool.isRequired,
   navBarConfig: PropTypes.shape({
@@ -160,6 +160,7 @@ Screen.propTypes = {
 }
 
 Screen.defaultProps = {
+  children: null,
   isError: false,
   isFetching: false,
   renderError: null,

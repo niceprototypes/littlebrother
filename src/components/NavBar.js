@@ -13,44 +13,53 @@ const NavBar = ({navBarConfig}) => {
   const {goBack, isFollowing, onClickFollow, tabs} = navBarConfig
 
   return (
-    <Headroom>
-      <OuterFlex alignItems="center" justifyContent="flex-end">
-        {goBack && (
-          <ButtonDiv isLeft>
-            <TapTarget onClick={goBack}>
-              <ButtonFlex alignItems="center" justifyContent="center">
-                <ChevronIcon />
-              </ButtonFlex>
-            </TapTarget>
-          </ButtonDiv>
-        )}
-        <TabsDiv>
-          <NavBarTabs tabs={tabs} />
-        </TabsDiv>
-        {onClickFollow && (
-          <ButtonDiv>
-            <TapTarget onClick={onClickFollow}>
-              <ButtonFlex alignItems="center" justifyContent="center">
-                <StarIcon isColored={isFollowing} />
-              </ButtonFlex>
-            </TapTarget>
-          </ButtonDiv>
-        )}
-      </OuterFlex>
-      <Separator />
-    </Headroom>
+    <OuterDiv>
+      <Headroom>
+        <OuterFlex alignItems="center" justifyContent="flex-end">
+          {goBack && (
+            <ButtonDiv isLeft>
+              <TapTarget onClick={goBack}>
+                <ButtonFlex alignItems="center" justifyContent="center">
+                  <ChevronIcon />
+                </ButtonFlex>
+              </TapTarget>
+            </ButtonDiv>
+          )}
+          <TabsDiv>
+            <NavBarTabs tabs={tabs} />
+          </TabsDiv>
+          {onClickFollow && (
+            <ButtonDiv>
+              <TapTarget onClick={onClickFollow}>
+                <ButtonFlex alignItems="center" justifyContent="center">
+                  <StarIcon isColored={isFollowing} />
+                </ButtonFlex>
+              </TapTarget>
+            </ButtonDiv>
+          )}
+        </OuterFlex>
+        <Separator />
+      </Headroom>
+    </OuterDiv>
   )
 }
 
 const ButtonDiv = styled(({isLeft, ...props}) => <div {...props} />)`
+  ${(props) => (props.isLeft ? "left" : "right")}: 0;
   position: absolute;
   top: 0;
-  ${(props) => (props.isLeft ? "left" : "right")}: 0;
 `
 
 const ButtonFlex = styled(Flex)`
   height: ${(props) => props.theme.navBar.outerHeight}px;
   width: ${(props) => props.theme.navBar.outerHeight}px;
+`
+
+const OuterDiv = styled.div`
+  .headroom-wrapper {
+    position: relative;
+    z-index: 2;
+  }
 `
 
 const OuterFlex = styled(Flex)`
