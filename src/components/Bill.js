@@ -62,7 +62,7 @@ const Bill = ({congress, slug}) => {
     status,
     tags,
     title,
-  } = state.bill.payload
+  } = (state.bill && state.bill.payload) || {}
 
   // Determine if following bill
   const isFollowing = state.determineIsFollowing("bills", id)
@@ -79,7 +79,7 @@ const Bill = ({congress, slug}) => {
   return (
     <Screen
       isError={!state.bill || !!state.bill.error}
-      isFetching={state.bill.isFetching}
+      isFetching={state.bill && state.bill.isFetching}
       navBarConfig={{
         goBack: () => navigate("/bills"),
         isFollowing,
@@ -106,6 +106,7 @@ const Bill = ({congress, slug}) => {
         selected: "bills",
       }}
     >
+<<<<<<< Updated upstream
       <Card>
         {srcCover && (
           <CoverDiv>
@@ -140,6 +141,44 @@ const Bill = ({congress, slug}) => {
           <BillStatus status={status} />
         </Gutter>
       </Card>
+=======
+      {!!state.bill && !!state.bill.payload && (
+        <>
+          <Card>
+            {srcCover && (
+              <CoverDiv>
+                <img alt="TODO" src={srcCover ? srcCover.large : null} />
+              </CoverDiv>
+            )}
+            <TapTarget onClick={() => navigate(`/legislator?id=${sponsorId}`)}>
+              <Gutter>
+                <LegislatorProfile
+                  name={sponsorName}
+                  party={sponsorParty}
+                  partyName={sponsorPartyName}
+                  srcAvatar={srcAvatar}
+                  stateName={`${sponsorTitle} ${sponsorName}`}
+                />
+              </Gutter>
+            </TapTarget>
+            {!!tags && tags.length > 0 && (
+              <Gutter bottom="small" top="none">
+                <Tags tags={tags} />
+              </Gutter>
+            )}
+            <Gutter top="none">
+              <Text fontSize="h2" fontWeight="medium">
+                {title}
+              </Text>
+            </Gutter>
+          </Card>
+          <Spacer size="small" />
+          <Card title="Bill status">
+            <Gutter top="none">{status && <BillStatus status={status} />}</Gutter>
+          </Card>
+        </>
+      )}
+>>>>>>> Stashed changes
     </Screen>
   )
 }

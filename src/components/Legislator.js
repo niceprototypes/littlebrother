@@ -66,7 +66,7 @@ const Legislator = ({id}) => {
     srcAvatar,
     srcCover,
     stateName,
-  } = state.legislator.payload
+  } = (state.legislator && state.legislator.payload) || {}
 
   // Determine if following legislator
   const isFollowing = state.determineIsFollowing("legislators", id)
@@ -83,7 +83,7 @@ const Legislator = ({id}) => {
   return (
     <Screen
       isError={!state.legislator || !!state.legislator.error}
-      isFetching={state.legislator.isFetching}
+      isFetching={state.legislator && state.legislator.isFetching}
       navBarConfig={{
         goBack: () => navigate("/chambers?chamber=senate"),
         isFollowing,
@@ -109,57 +109,61 @@ const Legislator = ({id}) => {
         selected: "chambers",
       }}
     >
-      <Card>
-        <LegislatorCover src={srcCover} />
-        <AvatarOuterDiv>
-          <AvatarInnerDiv>
-            <LegislatorAvatar partyName={partyName} size="medium" src={srcAvatar} />
-          </AvatarInnerDiv>
-        </AvatarOuterDiv>
-        <Gutter>
-          <NameDiv>
-            <Flex alignItems="center" justifyContent="center">
-              <PartyBadge party={party} size="medium" />
-              <Text fontSize="h2" fontWeight="black">
-                {displayName}
-              </Text>
-            </Flex>
-          </NameDiv>
-          <JurisdictionDiv>
-            <Flex justifyContent="center">
-              <Text fontSize="p2">
-                {stateName} {district && `${district}${prepareOrdinal(parseInt(district))}`}
-              </Text>
-            </Flex>
-          </JurisdictionDiv>
-          <Spacer />
-          <Flex justifyContent="center">
-            {accountFacebook && (
-              <ContactIconDiv>
-                <img src={facebookSrc} alt="Facebook icon" />
-              </ContactIconDiv>
-            )}
-            {accountTwitter && (
-              <ContactIconDiv>
-                <img src={twitterSrc} alt="Twitter icon" />
-              </ContactIconDiv>
-            )}
-            {accountYoutube && (
-              <ContactIconDiv>
-                <img src={youtubeSrc} alt="YouTube icon" />
-              </ContactIconDiv>
-            )}
-            {contactForm && (
-              <ContactIconDiv>
-                <img src={emailSrc} alt="Open envelope icon" />
-              </ContactIconDiv>
-            )}
-          </Flex>
-        </Gutter>
-        <Spacer />
-      </Card>
-      <Spacer size="small" />
-      <LegislatorScores party={party} scores={scores} />
+      {!!state.legislator && !!state.legislator.payload && (
+        <>
+          <Card>
+            <LegislatorCover src={srcCover} />
+            <AvatarOuterDiv>
+              <AvatarInnerDiv>
+                <LegislatorAvatar partyName={partyName} size="medium" src={srcAvatar} />
+              </AvatarInnerDiv>
+            </AvatarOuterDiv>
+            <Gutter>
+              <NameDiv>
+                <Flex alignItems="center" justifyContent="center">
+                  <PartyBadge party={party} size="medium" />
+                  <Text fontSize="h2" fontWeight="black">
+                    {displayName}
+                  </Text>
+                </Flex>
+              </NameDiv>
+              <JurisdictionDiv>
+                <Flex justifyContent="center">
+                  <Text fontSize="p2">
+                    {stateName} {district && `${district}${prepareOrdinal(parseInt(district))}`}
+                  </Text>
+                </Flex>
+              </JurisdictionDiv>
+              <Spacer />
+              <Flex justifyContent="center">
+                {accountFacebook && (
+                  <ContactIconDiv>
+                    <img src={facebookSrc} alt="Facebook icon" />
+                  </ContactIconDiv>
+                )}
+                {accountTwitter && (
+                  <ContactIconDiv>
+                    <img src={twitterSrc} alt="Twitter icon" />
+                  </ContactIconDiv>
+                )}
+                {accountYoutube && (
+                  <ContactIconDiv>
+                    <img src={youtubeSrc} alt="YouTube icon" />
+                  </ContactIconDiv>
+                )}
+                {contactForm && (
+                  <ContactIconDiv>
+                    <img src={emailSrc} alt="Open envelope icon" />
+                  </ContactIconDiv>
+                )}
+              </Flex>
+            </Gutter>
+            <Spacer />
+          </Card>
+          <Spacer size="small" />
+          <LegislatorScores party={party} scores={scores} />
+        </>
+      )}
     </Screen>
   )
 }

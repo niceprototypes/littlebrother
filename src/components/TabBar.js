@@ -60,7 +60,7 @@ const OuterDiv = styled.div`
   left: 0;
   position: fixed;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   @media only screen and (min-width: 720px) {
     left: 50%;
     transform: translateX(-50%);
