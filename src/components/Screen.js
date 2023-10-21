@@ -16,7 +16,6 @@ import Spacer from "./Spacer"
 import TabBar from "./TabBar"
 
 const Screen = ({children, isError, isFetching, navBarConfig, renderError, renderFetching, tabBarConfig}) => {
-  console.log(isFetching)
   const state = useStoreState((state) => ({
     isDarkMode: state.settings.isDarkMode,
   }))
@@ -30,7 +29,7 @@ const Screen = ({children, isError, isFetching, navBarConfig, renderError, rende
         <GlobalStyle />
         {navBarConfig && <NavBar navBarConfig={navBarConfig} />}
         {tabBarConfig && <TabBar isDarkMode={state.isDarkMode} isSafari={isSafari} tabBarConfig={tabBarConfig} />}
-        {children}
+        {isError ? renderError() : children}
         {isFetching && <FetchingDiv>{renderFetching()}</FetchingDiv>}
         <Spacer size="small" />
         <Toaster />
