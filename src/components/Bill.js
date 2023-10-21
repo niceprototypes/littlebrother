@@ -50,7 +50,7 @@ const Bill = ({congress, slug}) => {
     // latestMajorActionDate,
     // latestMajorActionDateAgo,
     number,
-    // sponsorId,
+    sponsorId,
     sponsorName,
     sponsorParty,
     sponsorPartyName,
@@ -112,7 +112,7 @@ const Bill = ({congress, slug}) => {
             <img alt="TODO" src={srcCover ? srcCover.large : null} />
           </CoverDiv>
         )}
-        <TapTarget onClick={() => {}}>
+        <TapTarget onClick={() => navigate(`/legislator?id=${sponsorId}`)}>
           <Gutter>
             <LegislatorProfile
               name={sponsorName}
