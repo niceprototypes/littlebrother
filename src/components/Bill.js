@@ -106,42 +106,6 @@ const Bill = ({congress, slug}) => {
         selected: "bills",
       }}
     >
-<<<<<<< Updated upstream
-      <Card>
-        {srcCover && (
-          <CoverDiv>
-            <img alt="TODO" src={srcCover ? srcCover.large : null} />
-          </CoverDiv>
-        )}
-        <TapTarget onClick={() => navigate(`/legislator?id=${sponsorId}`)}>
-          <Gutter>
-            <LegislatorProfile
-              name={sponsorName}
-              party={sponsorParty}
-              partyName={sponsorPartyName}
-              srcAvatar={srcAvatar}
-              stateName={`${sponsorTitle} ${sponsorName}`}
-            />
-          </Gutter>
-        </TapTarget>
-        {tags.length > 0 && (
-          <Gutter bottom="small" top="none">
-            <Tags tags={tags} />
-          </Gutter>
-        )}
-        <Gutter top="none">
-          <Text fontSize="h2" fontWeight="medium">
-            {title}
-          </Text>
-        </Gutter>
-      </Card>
-      <Spacer size="small" />
-      <Card title="Bill status">
-        <Gutter top="none">
-          <BillStatus status={status} />
-        </Gutter>
-      </Card>
-=======
       {!!state.bill && !!state.bill.payload && (
         <>
           <Card>
@@ -178,7 +142,6 @@ const Bill = ({congress, slug}) => {
           </Card>
         </>
       )}
->>>>>>> Stashed changes
     </Screen>
   )
 }
