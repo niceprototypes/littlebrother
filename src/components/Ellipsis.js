@@ -1,10 +1,12 @@
 import PropTypes from "prop-types"
 import React from "react"
-import LinesEllipsis from "react-lines-ellipsis"
+import styled from "styled-components"
 import Text from "./Text"
 
 const Ellipsis = ({isTrimmed, message}) => {
-  if (message.length < 20) {
+  const maxLength = 90
+
+  if (message.length < maxLength) {
     return (
       <Text fontSize="p2" fontWeight="bold">
         {message}
@@ -16,7 +18,7 @@ const Ellipsis = ({isTrimmed, message}) => {
     return (
       <>
         <Text fontSize="p2" fontWeight="bold">
-          {message.substring(0, 95)}...{" "}
+          {message.substring(0, maxLength)}...{" "}
         </Text>
         <Text color="link.primary" fontSize="p2" fontWeight="bold">
           more
@@ -28,7 +30,7 @@ const Ellipsis = ({isTrimmed, message}) => {
   return (
     <>
       <Text fontSize="p2" fontWeight="bold">
-        {message}
+        {message}{" "}
       </Text>
       <Text color="link.primary" fontSize="p2" fontWeight="bold">
         less
@@ -37,10 +39,16 @@ const Ellipsis = ({isTrimmed, message}) => {
   )
 }
 
+const ExpandDiv = styled.div`
+  height: 1.375em;
+  margin-left: 0.5em;
+  padding: 0 0.375em;
+  vertical-align: bottom;
+`
+
 Ellipsis.propTypes = {
   isTrimmed: PropTypes.bool.isRequired,
   message: PropTypes.string.isRequired,
-  onReflow: PropTypes.func.isRequired,
 }
 
 export default Ellipsis

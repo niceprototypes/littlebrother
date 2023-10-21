@@ -7,19 +7,10 @@ import styled from "styled-components"
 import Gutter from "./Gutter"
 
 const LatestMajorAction = ({align, date, message}) => {
-  const [isTrimmable, updateIsTrimmable] = React.useState(null)
   const [isTrimmed, updateIsTrimmed] = React.useState(true)
 
   const onClick = () => {
-    if (isTrimmable) {
-      updateIsTrimmed(!isTrimmed)
-    }
-  }
-
-  const onReflow = ({clamped}) => {
-    if (isTrimmable === null) {
-      updateIsTrimmable(clamped)
-    }
+    updateIsTrimmed(!isTrimmed)
   }
 
   return (
@@ -27,7 +18,7 @@ const LatestMajorAction = ({align, date, message}) => {
       <OuterDiv>
         <Gutter all="small">
           <Text align={align} color="content.secondary" fontSize="p2" fontWeight="bold" isBlock>
-            <Ellipsis isTrimmed={isTrimmed} message={message} onReflow={onReflow} />
+            <Ellipsis isTrimmed={isTrimmed} message={message} onClick={onClick} />
           </Text>
           {date && <Text fontSize="p2">{date}&nbsp;</Text>}
         </Gutter>
