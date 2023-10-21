@@ -4,10 +4,13 @@ import {Area, AreaChart, XAxis, YAxis, ResponsiveContainer} from "recharts"
 import styled from "styled-components"
 import preparePartyName from "../helpers/preparePartyName"
 import Gutter from "./Gutter"
+import Text from "./Text"
 
 const LegislatorScore = ({data, id, party}) => {
+  const partyName = party ? preparePartyName(party) : ""
+
   return (
-    <OuterDiv partyName={preparePartyName(party)}>
+    <OuterDiv partyName={partyName}>
       <Gutter top="none">
         <ResponsiveContainer height={120} width="100%">
           <AreaChart
@@ -35,8 +38,8 @@ const LegislatorScore = ({data, id, party}) => {
               stroke="red"
               label={({x, y, stroke, value}) => {
                 return (
-                  <LabelText x={x} y={y} dy={-8} stroke={stroke} textAnchor="middle">
-                    {value}
+                  <LabelText x={x} y={y} dy={-8} partyName={partyName} stroke={stroke} textAnchor="middle">
+                    <tspan>{value}</tspan>
                   </LabelText>
                 )
               }}
@@ -51,13 +54,17 @@ const LegislatorScore = ({data, id, party}) => {
 
 const LinearGradientStop = styled.stop``
 
-const LabelText = styled.stop`
-  fill: ${(props) => props.theme.color.loyalty.primary};
+const LabelText = styled(({partyName, ...props}) => <text {...props} />)`
+  fill: ${(props) =>
+    props.partyName ? props.theme.color.party[props.partyName].primary : props.theme.color.loyalty.primaryInverse};
 `
 
 const OuterDiv = styled(({partyName, ...props}) => <div {...props} />)`
   stop {
-    stop-color: ${(props) => props.theme.color.party[props.partyName].primaryInverse};
+    stop-color: ${(props) =>
+      props.partyName
+        ? props.theme.color.party[props.partyName].primaryInverse
+        : props.theme.color.loyalty.primaryInverse};
   }
 
   .recharts-cartesian-axis-line {
@@ -69,7 +76,8 @@ const OuterDiv = styled(({partyName, ...props}) => <div {...props} />)`
   }
 
   .recharts-area-curve {
-    stroke: ${(props) => props.theme.color.party[props.partyName].primary};
+    stroke: ${(props) =>
+      props.partyName ? props.theme.color.party[props.partyName].primary : props.theme.color.loyalty.primary};
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
@@ -102,7 +110,7 @@ LegislatorScore.propTypes = {
     })
   ).isRequired,
   id: PropTypes.string.isRequired,
-  party: PropTypes.oneOf(["D", "I", "R"]).isRequired,
+  party: PropTypes.oneOf(["D", "I", "R"]),
 }
 
 LegislatorScore.defaultProps = {}
