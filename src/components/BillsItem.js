@@ -43,7 +43,7 @@ const BillsItem = ({
         <ContentColumnDiv>
           <Gutter all="none" bottom="medium" left="small">
             <Gutter all="small" bottom="none" left="none">
-              <Flex>
+              <Flex isWrapped={false}>
                 <div style={{flexGrow: 1}}>
                   <TapTarget onClick={onClickLegislator}>
                     <Gutter all="small" horizontal="none">
