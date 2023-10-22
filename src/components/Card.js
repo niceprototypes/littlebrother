@@ -17,7 +17,12 @@ const Card = ({children, description, slot, title}) => {
                 {title}
               </Text>
             )}
-            {description && <Text>{description}</Text>}
+            {description && (
+              <>
+                <Spacer size="small" />
+                <Text>{description}</Text>
+              </>
+            )}
           </Gutter>
           {slot}
         </Flex>

@@ -113,7 +113,7 @@ const Legislator = ({id}) => {
         <LegislatorCover src={srcCover} />
         <AvatarOuterDiv>
           <AvatarInnerDiv>
-            <LegislatorAvatar partyName={partyName} size="medium" src={srcAvatar} />
+            <LegislatorAvatar partyName={partyName} size="large" src={srcAvatar} />
           </AvatarInnerDiv>
         </AvatarOuterDiv>
         <Gutter>

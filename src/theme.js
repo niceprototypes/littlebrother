@@ -20,8 +20,9 @@ const text = {
 
 const core = {
   avatarSize: {
-    medium: 72,
-    small: 20,
+    large: 72,
+    medium: 30,
+    small: 22,
   },
   borderRadius: {
     medium: 8,

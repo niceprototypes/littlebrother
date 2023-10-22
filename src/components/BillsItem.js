@@ -37,7 +37,7 @@ const BillsItem = ({
       <Flex isWrapped={false}>
         <Gutter right="none">
           <TapTarget onClick={onClickLegislator}>
-            <LegislatorAvatar partyName={sponsorPartyName} size="small" src={srcAvatar} />
+            <LegislatorAvatar partyName={sponsorPartyName} src={srcAvatar} />
           </TapTarget>
         </Gutter>
         <ContentColumnDiv>
