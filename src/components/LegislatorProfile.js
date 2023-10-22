@@ -5,12 +5,18 @@ import Flex from "./Flex"
 import LegislatorAvatar from "./LegislatorAvatar"
 import Text from "./Text"
 import PartyBadge from "./PartyBadge"
+import Spacer from "./Spacer"
 
-const LegislatorProfile = ({name, party, partyName, srcAvatar, stateName}) => {
+const LegislatorProfile = ({name, party, partyName, size, srcAvatar, stateName, title}) => {
   return (
-    <Flex alignItems="center">
-      {srcAvatar && <LegislatorAvatar partyName={partyName} size="small" src={srcAvatar} />}
+    <Flex alignItems="center" isWrapped={false}>
+      {srcAvatar && (
+        <div>
+          <LegislatorAvatar partyName={partyName} size={size} src={srcAvatar} />
+        </div>
+      )}
       <DetailsDiv>
+        {title && <Text>{title}</Text>}
         <Text fontWeight="bold" isBlock>
           {name}
         </Text>
@@ -32,7 +38,14 @@ LegislatorProfile.propTypes = {
   party: PropTypes.oneOf(["D", "I", "R"]).isRequired,
   partyName: PropTypes.oneOf(["democrat", "independent", "republican"]).isRequired,
   srcAvatar: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(["medium", "small"]).isRequired,
   stateName: PropTypes.string.isRequired,
+  title: PropTypes.string,
+}
+
+LegislatorProfile.defaultProps = {
+  size: "small",
+  title: "",
 }
 
 export default LegislatorProfile

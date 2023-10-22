@@ -22,6 +22,8 @@ import Spacer from "./Spacer"
 import TapTarget from "./TapTarget"
 import Text from "./Text"
 import Separator from "./Separator"
+import LegislatorAvatar from "./LegislatorAvatar"
+import PartyBadge from "./PartyBadge"
 
 const Chambers = ({chamber}) => {
   // Prepare actions
@@ -105,6 +107,68 @@ const Chambers = ({chamber}) => {
         <Gutter>
           <Flex alignItems="center">
             <Text fontWeight="black" style={{flexGrow: 1}}>
+              Leaders
+            </Text>
+          </Flex>
+        </Gutter>
+        <Gutter vertical="none">
+          <Separator />
+        </Gutter>
+        <Gutter all="small">
+          <Flex isWrapped={false}>
+            <ProfileDiv>
+              <TapTarget isWide onClick={() => {}}>
+                <Gutter all="small">
+                  <Flex alignItems="center" isWrapped={false}>
+                    <LegislatorAvatar partyName="independent" size="medium" src="/legislators/S000148-avatar.jpeg" />
+                    <DetailsDiv>
+                      <Text fontSize="h2" fontWeight="bold" isBlock>
+                        Charles E. Schumer
+                      </Text>
+                      <Flex>
+                        <PartyBadge party="D" partyName="democrat" size="medium" />
+                        <Text>New York — Majority Leader</Text>
+                      </Flex>
+                    </DetailsDiv>
+                  </Flex>
+                </Gutter>
+              </TapTarget>
+            </ProfileDiv>
+            <FollowButton isFollowing={false} onClickFollow={() => {}} />
+          </Flex>
+        </Gutter>
+        <Gutter vertical="none">
+          <Separator />
+        </Gutter>
+        <Gutter all="small">
+          <Flex isWrapped={false}>
+            <ProfileDiv>
+              <TapTarget isWide onClick={() => {}}>
+                <Gutter all="small">
+                  <Flex alignItems="center" isWrapped={false}>
+                    <LegislatorAvatar partyName="independent" size="medium" src="/legislators/M000355-avatar.jpeg" />
+                    <DetailsDiv>
+                      <Text fontSize="h2" fontWeight="bold" isBlock>
+                        Mitch McConnell
+                      </Text>
+                      <Flex>
+                        <PartyBadge party="R" partyName="republican" size="medium" />
+                        <Text>Kentucky — Minority Leader</Text>
+                      </Flex>
+                    </DetailsDiv>
+                  </Flex>
+                </Gutter>
+              </TapTarget>
+            </ProfileDiv>
+            <FollowButton isFollowing={false} onClickFollow={() => {}} />
+          </Flex>
+        </Gutter>
+      </Card>
+      <Spacer size="small" />
+      <Card>
+        <Gutter>
+          <Flex alignItems="center">
+            <Text fontWeight="black" style={{flexGrow: 1}}>
               Members
             </Text>
             <SearchInput
@@ -139,7 +203,7 @@ const Chambers = ({chamber}) => {
                 <Separator />
               </Gutter>
               <Gutter all="small">
-                <Flex>
+                <Flex isWrapped={false}>
                   <ProfileDiv>
                     <TapTarget isWide onClick={onClickLegislator}>
                       <Gutter all="small">
@@ -163,6 +227,10 @@ const Chambers = ({chamber}) => {
     </Screen>
   )
 }
+
+const DetailsDiv = styled.div`
+  margin-left: 0.75em;
+`
 
 const ProfileDiv = styled.div`
   flex-grow: 1;

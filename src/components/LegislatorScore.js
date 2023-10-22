@@ -4,7 +4,6 @@ import {Area, AreaChart, XAxis, YAxis, ResponsiveContainer} from "recharts"
 import styled from "styled-components"
 import preparePartyName from "../helpers/preparePartyName"
 import Gutter from "./Gutter"
-import Text from "./Text"
 
 const LegislatorScore = ({data, id, party}) => {
   const partyName = party ? preparePartyName(party) : ""

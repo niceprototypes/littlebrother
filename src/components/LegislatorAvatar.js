@@ -69,10 +69,12 @@ const OuterDiv = styled(({partyName, size, ...props}) => <div {...props} />)`
 
 LegislatorAvatar.propTypes = {
   partyName: PropTypes.oneOf(["democrat", "independent", "republican"]).isRequired,
-  size: PropTypes.oneOf(["medium", "small"]).isRequired,
+  size: PropTypes.oneOf(["large", "medium", "small"]),
   src: PropTypes.string.isRequired,
 }
 
-LegislatorAvatar.defaultProps = {}
+LegislatorAvatar.defaultProps = {
+  size: "small",
+}
 
 export default LegislatorAvatar
