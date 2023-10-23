@@ -43,7 +43,6 @@ const VotesItem = ({
   // url,
   voteResult,
   voteType,
-  // voteUri,
 }) => {
   return (
     <Card>
