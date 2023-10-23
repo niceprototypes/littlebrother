@@ -2,11 +2,11 @@ import axios from "axios"
 import {action, computed, thunk} from "easy-peasy"
 import moment from "moment"
 import mapVotes from "../helpers/mapVotes"
-import notify from "../helpers/notify"
+import mapVote from "../helpers/mapVote"
 import prepareApiCall from "../helpers/prepareApiCall"
 import prepareVoteId from "../helpers/prepareVoteId"
 import validateVotes from "../helpers/validateVotes"
-import inspect from "../utils/inspect"
+import validateVote from "../helpers/validateVote"
 
 const state = {
   error: "",
@@ -83,14 +83,38 @@ const actions = {
     }
   }),
   fetchVote: thunk(async (actions, inputs = {}, helpers) => {
-    // Set is fetching bills
-    actions.storeVote({
-      id: prepareVoteId(inputs.chamber, inputs.congress, inputs.session, inputs.rollCall),
-      error: "",
-      isFetching: true,
-    })
+    // Deconstruct helpers
+    const {getState} = helpers
+
+    // Prepare state
+    const state = getState()
+
+    // Prepare vote id
+    const id = prepareVoteId(inputs.chamber, inputs.congress, inputs.session, inputs.rollCall)
+
+    // Prepare vote
+    const vote = state.payload[id]
+
+    // If vote exists in state
+    if (vote) {
+      // Update vote
+      actions.storeVote({
+        id,
+        error: "",
+        isFetching: true,
+      })
+    } else {
+      // Initialize vote
+      actions.storeVote({
+        id,
+        error: "",
+        fetchDateTime: "",
+        isFetching: true,
+      })
+    }
 
     try {
+      // Prepare API call
       const apiCall = prepareApiCall("vote", {
         chamber: inputs.chamber,
         congress: inputs.congress,
@@ -101,10 +125,33 @@ const actions = {
       // Fetch
       const {data} = await axios(apiCall)
 
-      inspect(data)
-
       // Validate fetched data
-    } catch (error) {}
+      const validationError = validateVote(data)
+
+      // If validation error, notify
+      if (!!validationError) {
+        console.error(validationError)
+      }
+
+      // Map results
+      const mappedVote = mapVote({id, ...data.results.votes}, vote)
+
+      // Store vote
+      actions.storeVote({
+        id,
+        error: "",
+        fetchDateTime: moment().format(),
+        isFetching: false,
+        payload: mappedVote.payload,
+      })
+    } catch (error) {
+      // Store error
+      actions.storeVote({
+        id,
+        error: error.toString(),
+        isFetching: false,
+      })
+    }
   }),
   storeVotes: action((state, inputs) => {
     // Map input object keys

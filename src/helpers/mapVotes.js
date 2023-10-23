@@ -1,4 +1,7 @@
+import determineIfYes from "./determineIfYes"
 import prepareVoteId from "./prepareVoteId"
+import initializeVotePayload from "./initializeVotePayload"
+import updateVotePayload from "./updateVotePayload"
 
 // import validateBillId from "./validateBillId"
 
@@ -64,17 +67,8 @@ function mapVotesItem(fetchedItem, storedItem) {
     url,
     result: voteResult,
     vote_type: voteType,
-    vote_uri: voteUri,
+    // vote_uri: voteUri,
   } = fetchedItem
-
-  // TODO: Get amendment structure
-  /*if (Object.keys(amendment).length > 0) {
-    console.log(amendment)
-    debugger
-  }*/
-
-  // Prepare vote payload
-  const result = {}
 
   const nomination = _nomination
     ? {
@@ -85,72 +79,46 @@ function mapVotesItem(fetchedItem, storedItem) {
       }
     : {}
 
+  // Prepare vote payload
+  const result = {
+    payload: updateVotePayload({
+      democratic,
+      independent,
+      republican,
+      tieBreaker,
+      tieBreakerVote,
+      total,
+      vacantSeats: [],
+      voteResult,
+    }),
+  }
+
   // Initialize vote payload if needed, else update
   if (!storedItem) {
     result.error = ""
     result.fetchDateTime = ""
     result.payload = {
-      amendment: {},
-      bill: {
-        apiUri: bill.api_uri,
-        billId: bill.bill_id,
-        code: bill.code,
-        latestAction: bill.latest_action,
-        number: bill.number,
-        sponsorId: bill.sponsor_id,
-        title: bill.title,
-      },
-      chamber: chamber.toLowerCase(),
-      congress,
-      date,
-      democratic: {
-        yes: democratic.yes,
-        no: democratic.no,
-        present: democratic.present,
-        notVoting: democratic.not_voting,
-        isMajorityPosition: determineIfYes(democratic.majority_position),
-      },
-      description,
-      documentNumber,
-      documentTitle,
-      id,
-      independent: {
-        yes: independent.yes,
-        no: independent.no,
-        present: independent.present,
-        notVoting: independent.not_voting,
-      },
-      nomination: {
-        agency: nomination.agency,
-        name: nomination.name,
-        nominationId: nomination.nomination_id,
-        number: nomination.number,
-      },
-      question,
-      questionText,
-      republican: {
-        yes: republican.yes,
-        no: republican.no,
-        present: republican.present,
-        notVoting: republican.not_voting,
-        isMajorityPosition: determineIfYes(republican.majority_position),
-      },
-      rollCall,
-      session,
-      source,
-      tieBreaker,
-      tieBreakerVote,
-      time,
-      total: {
-        yes: total.yes,
-        no: total.no,
-        present: total.present,
-        notVoting: total.not_voting,
-      },
-      url,
-      voteResult,
-      voteType,
-      voteUri,
+      ...result.payload,
+      ...initializeVotePayload({
+        amendment,
+        bill,
+        chamber,
+        congress,
+        date,
+        description,
+        documentNumber,
+        documentTitle,
+        id,
+        nomination,
+        question,
+        questionText,
+        rollCall,
+        session,
+        source,
+        time,
+        url,
+        voteType,
+      }),
     }
   } else {
     result.error = storedItem.error
@@ -162,10 +130,6 @@ function mapVotesItem(fetchedItem, storedItem) {
   }
 
   return result
-}
-
-function determineIfYes(value) {
-  return value === "Yes"
 }
 
 export default mapVotes

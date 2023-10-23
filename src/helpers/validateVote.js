@@ -1,37 +1,26 @@
 import Joi from "joi"
-import api from "../constants/api.json"
-import rules from "../constants/rules.json"
-import validateBillId from "./validateBillId"
-import validateMultiple from "./validateMultiple"
-import validateNumberString from "./validateNumberString"
-import validateTime from "./validateTime"
 import stateNames from "../constants/stateNames.json"
 
-function validateVotes(data) {
+function validateVote(data) {
   const schema = Joi.object({
     status: "OK",
     copyright: Joi.string(),
     results: Joi.object({
-      chamber: rules.chambers,
-      offset: Joi.number().custom((value, helpers) => validateMultiple(value, 20, helpers)),
-      num_results: 20,
-      votes: Joi.array().items(
-        Joi.object({
-          congress: api.congress,
-          chamber: rules.chambers,
+      votes: Joi.object({
+        vote: Joi.object({
+          congress: Joi.number(),
           session: Joi.number(),
+          chamber: ["House", "Senate"],
           roll_call: Joi.number(),
           source: Joi.string().uri(),
           url: Joi.string().uri(),
-          vote_uri: Joi.string().uri(),
           bill: Joi.object({
-            bill_id: Joi.string().custom(validateBillId),
+            bill_id: Joi.string(),
             number: Joi.string(),
-            code: Joi.string().alphanum(),
-            sponsor_id: Joi.string().alphanum(),
-            api_uri: Joi.string().uri(),
-            title: Joi.string(),
-            latest_action: Joi.string(),
+            api_uri: Joi.string().uri().empty(null),
+            title: Joi.string().empty(null),
+            short_title: Joi.string().empty(null),
+            latest_action: Joi.string().empty(null),
           }),
           amendment: Joi.object({
             number: Joi.string(),
@@ -52,14 +41,14 @@ function validateVotes(data) {
           }),
           question: Joi.string(),
           question_text: Joi.string(),
-          description: Joi.string().empty(""),
-          vote_type: rules.voteTypes,
+          description: Joi.string(),
+          vote_type: Joi.string(),
           date: Joi.date(),
-          time: Joi.string().custom(validateTime),
+          time: Joi.string(),
           result: Joi.string(),
           tie_breaker: Joi.string().valid("Vice President of the United States").empty(""),
           tie_breaker_vote: Joi.string().valid("Yea", "Nay").empty(""),
-          document_number: Joi.string().custom(validateNumberString).empty(""),
+          document_number: Joi.string().empty(""),
           document_title: Joi.string().empty(""),
           democratic: Joi.object({
             yes: Joi.number(),
@@ -80,17 +69,30 @@ function validateVotes(data) {
             no: Joi.number(),
             present: Joi.number(),
             not_voting: Joi.number(),
-            majority_position: ["Yes", "No"],
           }),
           total: Joi.object({
             yes: Joi.number(),
             no: Joi.number(),
             present: Joi.number(),
             not_voting: Joi.number(),
-            majority_position: ["Yes", "No"],
           }),
-        })
-      ),
+          positions: Joi.array().items(
+            Joi.object({
+              member_id: Joi.string().alphanum(),
+              name: Joi.string(),
+              party: Joi.string().valid("D", "ID", "R"),
+              state: Object.keys(stateNames),
+              vote_position: ["No", "Not Voting", "Yes"],
+              dw_nominate: Joi.number().empty(null),
+            })
+          ),
+        }),
+        vacant_seats: Joi.array().items(
+          Joi.object({
+            state: Object.keys(stateNames),
+          })
+        ),
+      }),
     }),
   })
 
@@ -99,4 +101,4 @@ function validateVotes(data) {
   return error
 }
 
-export default validateVotes
+export default validateVote

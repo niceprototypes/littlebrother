@@ -30,7 +30,7 @@ const Vote = ({chamber, congress, rollCall, session}) => {
   React.useEffect(() => {
     // Fetch if needed
     if (shouldFetch) {
-      actions.fetchVote({chamber: "senate", congress: 118, rollCall: 199, session: 1})
+      actions.fetchVote({chamber, congress, rollCall, session})
     }
   }, [])
 
@@ -51,7 +51,7 @@ const Vote = ({chamber, congress, rollCall, session}) => {
   return (
     <Screen
       navBarConfig={{
-        goBack: () => navigate("/bills"),
+        goBack: () => navigate("/votes"),
         isFollowing,
         tabs: [
           {
