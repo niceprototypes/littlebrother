@@ -21,7 +21,7 @@ function updateBillPayload(payload) {
   const datePassedSenate = formatDate(_datePassedSenate)
   const dateVetoed = formatDate(_dateVetoed)
   const latestMajorActionDate = formatDate(_latestMajorActionDate)
-  const latestMajorActionDateAgo = moment(latestMajorActionDate).fromNow()
+  const latestMajorActionDateAgo = moment(latestMajorActionDate, formats.dateTime).fromNow()
 
   // Find bill type
   const billType = billTypes.find((type) => type.id === typeId)
@@ -92,7 +92,7 @@ function prepareStatusesOrdered(chamber, type, statuses, latestMajorAction, late
 
     // Convert dates to moments
     const houseMoment = moment(house.date, formats.dateTime)
-    const senateMoment = moment(senate.date, "MMM D, YYYY")
+    const senateMoment = moment(senate.date, formats.dateTime)
 
     // Diff dates
     const isPassedHouseFirst = houseMoment.diff(senateMoment, "days") > 0
