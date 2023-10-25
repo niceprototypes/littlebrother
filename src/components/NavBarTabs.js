@@ -2,49 +2,35 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import Flex from "./Flex"
-import TapTarget from "./TapTarget"
 import Text from "./Text"
+import Button from "./Button"
+import Spacer from "./Spacer"
 
 const NavBar = ({tabs}) => {
   return (
     <Flex justifyContent="center">
-      {tabs.map((tab) => {
+      {tabs.map((tab, index) => {
         if (tab.onClick) {
           return (
-            <TapTarget key={tab.label} onClick={tab.onClick}>
-              <TabText
-                color={tab.isActive ? "content.primaryInverse" : "content.primary"}
-                fontWeight="bold"
-                isActive={tab.isActive}
-                isBlock
-              >
-                {tab.label}
-              </TabText>
-            </TapTarget>
+            <Flex key={tab.label}>
+              <Button label={tab.label} onClick={tab.onClick} size="p2" status={tab.isActive ? "active" : "default"} />
+              {index < tabs.length - 1 && <Spacer size="small" />}
+            </Flex>
           )
         }
         return (
-          <TabText
-            color={tab.isActive ? "content.primaryInverse" : "content.primary"}
-            fontWeight="bold"
-            isActive={tab.isActive}
-            isBlock
-            key={tab.label}
-          >
-            {tab.label}
-          </TabText>
+          <TabFlex key={tab.label}>
+            <Text fontWeight="bold">{tab.label}</Text>
+            {tabs.length - 1 < index && <Spacer size="small" />}
+          </TabFlex>
         )
       })}
     </Flex>
   )
 }
 
-const TabText = styled(({isActive, ...props}) => <Text {...props} />)`
-  background-color: ${(props) =>
-    props.isActive ? props.theme.color.background.primaryInverse : props.theme.color.background.primary};
-  border-radius: ${(props) => props.theme.navBar.innerHeight / 2}px;
-  line-height: ${(props) => props.theme.navBar.innerHeight}px;
-  padding: 0 1em;
+const TabFlex = styled(Flex)`
+  padding-top: 0.25em;
 `
 
 NavBar.propTypes = {
