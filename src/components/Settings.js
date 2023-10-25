@@ -42,7 +42,12 @@ const Settings = () => {
         </Gutter>
       </Card>
       <Gutter>
-        <Button isWide label="Clear local storage" onClick={() => localStorage.removeItem("[EasyPeasyStore][0]")} />
+        <Button
+          isWide
+          label="Clear local storage"
+          onClick={() => localStorage.removeItem("[EasyPeasyStore][0]")}
+          status="active"
+        />
       </Gutter>
     </Screen>
   )

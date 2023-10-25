@@ -9,6 +9,7 @@ const Button = ({isWide, label, onClick, size, status}) => {
     <ButtonStyled isWide={isWide} onClick={onClick} size={size} status={status}>
       <Gutter vertical="none">
         <Text
+          align="center"
           color={status === "active" ? "content.primaryInverse" : "content.primary"}
           fontSize={size}
           fontWeight="bold"
