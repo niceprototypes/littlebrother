@@ -8,6 +8,7 @@ import TapTarget from "./TapTarget"
 import StarIcon from "./icons/Star"
 import ChevronIcon from "./icons/Chevron"
 import NavBarTabs from "./NavBarTabs"
+import Button from "./Button"
 
 const NavBar = ({navBarConfig}) => {
   const {goBack, isFollowing, onClickFollow, tabs} = navBarConfig
@@ -16,15 +17,15 @@ const NavBar = ({navBarConfig}) => {
     <OuterDiv>
       <Headroom>
         <OuterFlex alignItems="center" justifyContent="flex-end">
-          {goBack && (
-            <ButtonDiv isLeft>
+          <ButtonDiv isLeft>
+            {goBack && (
               <TapTarget onClick={goBack}>
                 <ButtonFlex alignItems="center" justifyContent="center">
                   <ChevronIcon />
                 </ButtonFlex>
               </TapTarget>
-            </ButtonDiv>
-          )}
+            )}
+          </ButtonDiv>
           <TabsDiv>
             <NavBarTabs tabs={tabs} />
           </TabsDiv>
