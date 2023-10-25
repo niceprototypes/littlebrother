@@ -41,7 +41,7 @@ const Vote = ({chamber, congress, rollCall, session}) => {
 
   // Prepare follow handler
   const onClickFollow = () => {
-    actions.onClickFollow({id, key: "bills"})
+    actions.onClickFollow({id, key: "votes"})
 
     if (!isFollowing) {
       notify(`Following Roll Call #${rollCall}`)
